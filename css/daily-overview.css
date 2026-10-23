@@ -1,0 +1,296 @@
+/* Keep the home and life pages useful before the first scroll. */
+.home-today .ht-head {
+  position: relative;
+  isolation: isolate;
+  align-items: center;
+  min-height: 0;
+}
+/* Faint campus line drawing behind the 今天 heading. */
+.home-today .ht-head::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -12px;
+  right: 60px;
+  width: 30%;
+  height: 74px;
+  background: url("../assets/huxi-campus-line.svg?v=cd4af41110") right center / contain no-repeat;
+  opacity: .2;
+  pointer-events: none;
+}
+.ht-dayline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 12px;
+}
+.home-today .ht-dayline h1 {
+  margin: 0;
+  font-size: 26px;
+}
+.ht-dayline .ht-date {
+  font-size: 12px;
+}
+.ht-compact-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 14px;
+}
+.ht-cta-copy {
+  min-width: 0;
+}
+.ht-compact-cta .ht-cta-actions {
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0 6px;
+  margin-top: 0;
+}
+.ht-compact-cta .text-button {
+  min-height: 44px;
+  padding-inline: 8px;
+  white-space: nowrap;
+}
+.ht-rest-toggle summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding-inline: 4px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.ht-rest-toggle summary::-webkit-details-marker {
+  display: none;
+}
+.ht-rest-toggle summary::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 18px;
+}
+.ht-rest-toggle[open] summary::after {
+  content: "−";
+}
+.browser-backup-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  border-radius: 16px;
+  background: var(--accent-container);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.browser-backup-notice p {
+  margin: 0;
+}
+.browser-backup-notice strong {
+  color: var(--ink);
+}
+.browser-backup-notice .text-button {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding-inline: 8px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+.browser-backup-notice > :last-child {
+  display: flex;
+  align-items: center;
+  gap: 0 4px;
+}
+@media (max-width: 650px) {
+  .home-bento .home-today {
+    gap: 10px;
+    padding: 14px;
+  }
+  .home-today .ht-head {
+    gap: 6px;
+  }
+  .home-today .ht-head::after {
+    top: -6px;
+    right: 12px;
+    height: 58px;
+    opacity: .12;
+  }
+  .ht-dayline {
+    gap: 4px 8px;
+  }
+  .home-today .ht-dayline h1 {
+    gap: 6px;
+    font-size: 22px;
+  }
+  .ht-dayline .ht-phase {
+    min-height: 22px;
+    padding: 1px 7px;
+    font-size: 12px;
+  }
+  .ht-dayline .ht-date {
+    flex-basis: 100%;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .ht-open {
+    padding-inline: 0;
+    font-size: 12px;
+  }
+  .home-today .ht-body {
+    gap: 2px;
+  }
+  .home-today .ht-next {
+    padding: 10px 12px;
+    border-radius: 14px;
+  }
+  .home-today .ht-compact-cta {
+    flex-wrap: wrap;
+    gap: 0 8px;
+  }
+  .ht-compact-cta .ht-status {
+    gap: 5px;
+    font-size: 14px;
+  }
+  .ht-compact-cta .ht-quiet-text {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .ht-compact-cta .ht-cta-actions {
+    flex-wrap: nowrap;
+    gap: 0;
+    margin-left: auto;
+  }
+  .ht-compact-cta .text-button {
+    padding-inline: 5px;
+    font-size: 12px;
+  }
+  .home-today .ht-minis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .home-today .ht-mini {
+    gap: 7px;
+    min-height: 64px;
+    padding: 8px;
+    border-radius: 13px;
+  }
+  .home-today .ht-mini .ios-glyph {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+  .home-today .ht-mini strong {
+    font-size: 13px;
+  }
+  .home-today .ht-mini small {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .home-bento .home-launch {
+    padding: 14px 10px 10px;
+  }
+  .home-launch .panel-heading {
+    margin: 0 4px 6px;
+  }
+  .home-launch .panel-note {
+    font-size: 12px;
+  }
+  .home-bento .app-launcher {
+    gap: 2px;
+  }
+  .home-bento .launch-tile,
+  .life-quick .launch-tile {
+    gap: 6px;
+    padding: 7px 0;
+    font-size: 12px;
+  }
+  html body .home-bento .launch-tile .launch-icon,
+  html body .life-quick .launch-tile .launch-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+  html body .home-bento .launch-tile .launch-icon svg,
+  html body .life-quick .launch-tile .launch-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  main:has(.life-quick) .workspace-heading {
+    margin-bottom: 12px;
+  }
+  main:has(.life-quick) .workspace-heading h1 {
+    font-size: 26px;
+  }
+  main:has(.life-quick) .workspace-heading > div > p:not(.workspace-eyebrow) {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .life-quick.workspace-panel {
+    padding: 7px 6px;
+    margin-bottom: 12px;
+  }
+  .life-points.workspace-panel {
+    padding: 14px;
+  }
+  .life-points .panel-heading {
+    margin-bottom: 8px;
+  }
+  .life-points .life-point-grid {
+    gap: 8px;
+  }
+  .life-point-grid > button {
+    gap: 10px;
+    min-height: 66px;
+    padding: 10px;
+    border-radius: 13px;
+  }
+  .browser-backup-notice {
+    flex-wrap: wrap;
+    gap: 0 8px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .browser-backup-notice > :last-child {
+    margin-left: auto;
+  }
+}
+@media (max-width: 360px) {
+  .home-today .ht-compact-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0 4px;
+  }
+  .ht-compact-cta .ht-cta-copy {
+    display: contents;
+  }
+  .ht-compact-cta .ht-status {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .ht-compact-cta .ht-quiet-text {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 0;
+  }
+  .ht-compact-cta .ht-cta-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .home-today .ht-mini .ios-glyph {
+    display: none;
+  }
+  .home-bento .launch-tile,
+  .life-quick .launch-tile {
+    font-size: 12px;
+  }
+  .home-launch .panel-note {
+    font-size: 12px;
+  }
+}

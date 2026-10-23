@@ -1,0 +1,406 @@
+/* 示例模式横幅、首页学期进度条与首次引导的三个去处。 */
+
+/* 示例模式细条：一行高，点开看说明。 */
+.demo-banner {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0 0 12px;
+  padding: 0 4px 0 12px;
+  border-radius: 12px;
+  background: var(--accent-container);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.demo-banner-more {
+  flex: 1;
+  min-width: 0;
+}
+
+.demo-banner-more > summary {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 40px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.demo-banner-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.demo-banner-dot {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.demo-banner strong {
+  color: var(--accent);
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.demo-banner-time {
+  overflow: hidden;
+  color: var(--ink-soft);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.demo-banner-time::before {
+  content: '·';
+  margin-right: 8px;
+  color: var(--muted);
+}
+
+.demo-banner-chevron {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  margin: -3px 0 0 2px;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.demo-banner-more[open] .demo-banner-chevron {
+  margin-top: 3px;
+  transform: rotate(-135deg);
+}
+
+.demo-banner-panel {
+  padding: 0 0 10px 15px;
+}
+
+.demo-banner-panel p {
+  margin: 0 0 4px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.demo-banner-panel .text-button {
+  min-height: 36px;
+  padding-left: 0;
+}
+
+.demo-banner-exit {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.demo-banner-exit:hover {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.term-progress {
+  overflow: hidden;
+  height: 8px;
+  margin: 4px 0 12px;
+  border-radius: 999px;
+  background: var(--fill-1);
+}
+
+.term-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.onboarding-choices {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.onboarding-choice {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  min-height: 64px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface, #fff);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.onboarding-choice strong {
+  font-size: 16px;
+}
+
+.onboarding-choice small {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.onboarding-choice:hover,
+.onboarding-choice:focus-visible {
+  border-color: var(--accent);
+}
+
+.onboarding-choice-primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent, #fff);
+}
+
+.onboarding-choice-primary small {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.onboarding-profile {
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.onboarding-profile summary {
+  min-height: 44px;
+  padding: 10px 0;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 首页「AI 智能体」卡：WorkBuddy 技能的入口。宽屏左边说明、右边一段示意对话；手机只留说明。 */
+.home-bento .home-agent {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.home-agent .agent-copy {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.home-agent .agent-copy .panel-heading {
+  margin-bottom: 4px;
+}
+
+.agent-chat {
+  display: none;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    radial-gradient(
+      120% 90% at 100% 0%,
+      color-mix(in srgb, var(--accent) 9%, transparent),
+      transparent 60%
+    ),
+    color-mix(in srgb, var(--accent) 4%, var(--surface));
+}
+
+.agent-chat-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.agent-chat-bar img {
+  border-radius: 6px;
+}
+
+.agent-chat-bar small {
+  margin-left: auto;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.agent-bubble {
+  max-width: 92%;
+  margin: 0;
+  padding: 10px 13px;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.agent-bubble-user {
+  justify-self: end;
+  width: fit-content;
+  margin: 0 0 10px auto;
+  border-radius: 16px 16px 4px;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.agent-bubble-reply {
+  border-radius: 16px 16px 16px 4px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 6%);
+}
+
+.agent-bubble-reply p {
+  margin: 0;
+}
+
+.agent-chat-source {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 0 0;
+  border: 0;
+  border-top: 1px dashed var(--line);
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+}
+
+.agent-chat-source svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.agent-chat-source:hover span {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.agent-chat figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (min-width: 900px) {
+  .home-bento .home-agent {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr);
+    gap: 32px;
+  }
+
+  .agent-chat {
+    display: grid;
+  }
+}
+
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .agent-chat .agent-bubble {
+    animation: agent-bubble-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .agent-chat .agent-bubble-reply {
+    animation-delay: 0.25s;
+  }
+}
+
+@keyframes agent-bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+body[data-theme='dark'] .agent-bubble-reply {
+  background: rgb(255 255 255 / 7%);
+  box-shadow: none;
+}
+
+.home-agent .agent-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.home-agent .agent-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-agent .agent-examples button {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent-container);
+  color: var(--accent);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.home-agent .agent-examples button:hover {
+  background: color-mix(in srgb, var(--accent) 18%, var(--accent-container));
+}
+
+.home-agent .agent-examples button:active {
+  transform: scale(0.97);
+}
+
+.home-agent .agent-try {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.home-agent .agent-download {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-self: start;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+/* 手机上首屏先给「今天」和常用入口（首屏测试守着这一条），智能体卡片排在常用入口之后。 */
+@media (max-width: 760px) {
+  .home-bento .home-today {
+    order: -2;
+  }
+
+  .home-bento .home-launch {
+    order: -1;
+  }
+}

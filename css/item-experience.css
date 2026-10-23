@@ -1,0 +1,42 @@
+.item-feedback { margin: 26px 0 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface-secondary); }
+.item-feedback summary { min-height: 48px; padding: 12px 16px; color: var(--accent); font-weight: 600; cursor: pointer; }
+.feedback-form { display: grid; gap: 10px; padding: 0 16px 16px; }
+.feedback-form p { margin: 0; color: var(--muted); font-size: 13px; }
+.feedback-form label { font-weight: 600; font-size: 14px; }
+.feedback-form select,.feedback-form textarea,.share-link-input { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit;
+  font-size: 16px;
+}
+.feedback-form textarea { resize: vertical; min-height: 100px; }
+.feedback-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.feedback-actions a { text-decoration: none; }
+.share-link-fallback { padding: 10px 16px; border-bottom: 1px solid var(--line); }
+.share-link-fallback label { display: block; margin-bottom: 6px; color: var(--muted); font-size: 13px; }
+.item-share-button { white-space: nowrap; }
+.search-result-wrap { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; border-bottom: 1px solid var(--line); }
+.search-result-wrap .search-result { border-bottom: 0; }
+.search-map-action { display: inline-flex; gap: 5px; align-items: center; min-height: 44px; padding: 8px 14px; border: 0; border-radius: 10px; background: var(--accent-container); color: var(--accent); font: inherit; font-size: 13px; cursor: pointer; }
+@media (max-width:650px) {
+  .search-result-wrap { grid-template-columns: minmax(0,1fr); }
+  .search-map-action { justify-self: start; margin: 0 16px 12px 68px; }
+  .modal-toolbar .save-label { display: none; }
+  .modal-toolbar { gap: 5px; }
+  .modal-controls { gap: 4px; }
+  .item-share-button { font-size: 13px; padding: 8px; min-height: 44px; }
+}
+
+/* 详情页顶栏在手机上按钮较多：类型标签不换成竖排，按钮不被挤出屏幕。
+   ≤480px 隐藏类型标签（标题就在下面）；≤360px 隐藏右上角关闭钮，左侧「返回」同样能关闭。 */
+.reader-type { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.modal-controls { min-width: 0; flex-wrap: nowrap; }
+.modal-controls .text-button { white-space: nowrap; }
+@media (max-width: 480px) {
+  .modal-toolbar .reader-type { display: none; }
+  .modal-toolbar { gap: 4px; padding-left: 8px; padding-right: 8px; }
+  .modal-controls { gap: 2px; }
+  .modal-controls .text-button { min-height: 44px; padding: 6px; font-size: 14px; }
+  .reader-back.text-button { padding-right: 6px; }
+}
+@media (max-width: 360px) {
+  .modal-controls > [data-action='close-modal'] { display: none; }
+  .modal-controls .text-button { padding: 6px 4px; font-size: 13px; }
+}

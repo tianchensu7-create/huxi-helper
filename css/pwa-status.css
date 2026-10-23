@@ -1,0 +1,158 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   PWA 状态条：新版本提示
+   离线横幅的样式在 css/theme.css（「离线横幅」块，走 body.is-offline），
+   这里只放更新提示，避免和那边重复定义。
+   颜色全部用 theme.css 里的变量，深色主题自动跟随，不用再写一套。
+   ───────────────────────────────────────────────────────────────────────── */
+
+.pwa-update {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* fixed + left:50% 时收缩到一半视口就会换行，这里按内容撑开再限宽 */
+  width: max-content;
+  max-width: min(92vw, 420px);
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 移动端底部导航是 fixed 的，更新条要抬到它上面，并避开 iPhone 的 home 指示条 */
+@media (max-width: 1200px) {
+  .pwa-update {
+    bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+.pwa-update__action {
+  flex: 0 0 auto;
+  min-height: 32px;
+  padding: 4px 14px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--fill-1);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pwa-update__action:hover,
+.pwa-update__action:focus-visible {
+  background: var(--fill-2);
+  outline: none;
+}
+
+/* 点了刷新到页面真正重载之间，按钮置灰，避免连点发两次消息 */
+.pwa-update.is-waiting .pwa-update__action {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.pwa-update__close {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pwa-update__close:hover,
+.pwa-update__close:focus-visible {
+  background: var(--fill-1);
+  color: var(--ink);
+  outline: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   第二次访问的安装邀请：只在收到 beforeinstallprompt 且访问过两次后出现，
+   位置、圆角与更新条一致，避免页面上同时出现两种底部浮条。
+   ───────────────────────────────────────────────────────────────────────── */
+
+.pwa-install {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 69;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: min(92vw, 460px);
+  padding: 8px 10px 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .pwa-install {
+    bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+.pwa-install__text {
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+.pwa-install__action {
+  flex: 0 0 auto;
+  min-height: 32px;
+  padding: 4px 14px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.pwa-install__action:hover,
+.pwa-install__action:focus-visible {
+  background: var(--accent-strong);
+  outline: none;
+}
+
+.pwa-install__close {
+  flex: 0 0 auto;
+  min-height: 32px;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.pwa-install__close:hover,
+.pwa-install__close:focus-visible {
+  background: var(--fill-1);
+  color: var(--ink);
+  outline: none;
+}

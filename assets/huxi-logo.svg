@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>重大虎溪小助手</title>
+  <desc>以山、打开的书和一弯溪水组成的虎溪生活标记。</desc>
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="#002fa7"/>
+  <path d="m13 26 10-11 9 9 7-7 12 12" stroke="#dbe6ff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 31c7-2 12-1 18 3 6-4 11-5 18-3v15c-7-2-12-1-18 3-6-4-11-5-18-3Z" fill="#ffffff"/>
+  <path d="M32 35v11" stroke="#002fa7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M20 53c5-4 8 1 13-2s7-1 11-3" stroke="#a8c0ff" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="48" cy="17" r="3" fill="#a8c0ff"/>
+</svg>

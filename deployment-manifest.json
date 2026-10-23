@@ -1,0 +1,2165 @@
+{
+  "schemaVersion": 1,
+  "generator": "cqu-huxi-static-release-v1",
+  "generatedAt": "2026-10-23T11:25:25.293Z",
+  "entrypoint": "index.html",
+  "routing": {
+    "strategy": "hash",
+    "itemExample": "index.html#item/guide-network",
+    "requiresRewrite": false
+  },
+  "checks": {
+    "relativeReferences": true,
+    "itemHashRoute": true,
+    "academicArticles": 104,
+    "academicBundles": 27,
+    "academicSearchRecords": 104,
+    "explicitSourceHrefsOnly": true,
+    "bundling": {
+      "scriptTags": 4,
+      "sourceScripts": 40,
+      "bundles": [
+        {
+          "path": "js/bundle-base.js",
+          "sources": [
+            "js/demo-clock.js",
+            "js/site-config.js",
+            "js/item-links.js",
+            "js/file-meta.js",
+            "js/report.js",
+            "js/browser-context.js",
+            "js/time.js",
+            "js/data.js",
+            "js/academic-loader.js"
+          ]
+        },
+        {
+          "path": "js/bundle-content.js",
+          "sources": [
+            "js/academic-content.js",
+            "js/digital-content.js",
+            "js/atrust-content.js",
+            "js/study-content.js",
+            "js/life-content.js",
+            "js/dining-experience.js",
+            "js/bed-table.js",
+            "js/map-points.js",
+            "js/freshman-content.js",
+            "js/freshman-academic.js",
+            "js/calendar-data.js",
+            "js/calendar-guides.js",
+            "js/academic-calendar.js"
+          ]
+        },
+        {
+          "path": "js/bundle-ui.js",
+          "sources": [
+            "js/icons.js",
+            "js/campus-map-art.js",
+            "js/geo-links.js",
+            "js/map-buildings.js",
+            "js/map.js",
+            "js/study-space.js",
+            "js/timetable.js",
+            "js/exams.js",
+            "js/community-space.js",
+            "js/command-palette.js",
+            "js/backup.js",
+            "js/onboarding.js",
+            "js/share-card.js",
+            "js/demo.js",
+            "js/app.js",
+            "js/pwa.js",
+            "js/browser-hint.js"
+          ]
+        }
+      ],
+      "kept": [
+        "js/search.js"
+      ]
+    },
+    "minify": {
+      "files": 5,
+      "beforeBytes": 1011969,
+      "afterBytes": 648301
+    },
+    "sensitiveScan": {
+      "scannedFiles": 140,
+      "findings": 0
+    },
+    "compression": {
+      "files": 137,
+      "originalBytes": 2533348,
+      "gzipBytes": 746739,
+      "brotliBytes": 645925
+    },
+    "publicSourceFiles": 151,
+    "omittedSourceFiles": 1
+  },
+  "totalBytes": 49625684,
+  "files": [
+    {
+      "path": "404.html",
+      "bytes": 3288,
+      "sha256": "45b0a225a4a77e933968bf62d56fcf324d5425b85d4c2cc28486fe47ff996937",
+      "referencedBy": [
+        "entrypoint"
+      ]
+    },
+    {
+      "path": "assets/academic-calendar-2026-2027-fall.png",
+      "bytes": 129510,
+      "sha256": "58cd40a0300edc07a4ed193e1d09ae895b9b320bd90969553b7af092757271fc",
+      "referencedBy": [
+        "js/app.js",
+        "js/calendar-data.js",
+        "js/calendar-guides.js"
+      ]
+    },
+    {
+      "path": "assets/atrust/client-access.png",
+      "bytes": 82883,
+      "sha256": "4e4cd4867fa60e1552e4f82f259831badf1ef29881f5e053f9880019977ed9df",
+      "referencedBy": [
+        "js/app.js",
+        "js/atrust-content.js"
+      ]
+    },
+    {
+      "path": "assets/atrust/client-start.png",
+      "bytes": 107942,
+      "sha256": "89fb1f049e92a663ef031d67382b181a4488a1a4b63ce8e1b718484d1748040a",
+      "referencedBy": [
+        "js/app.js",
+        "js/atrust-content.js"
+      ]
+    },
+    {
+      "path": "assets/campus-reference.svg",
+      "bytes": 4101,
+      "sha256": "47732a14038b83f4d86205f486e18e6be427797f6c2ff55dba1d89d71e29f72a",
+      "referencedBy": [
+        "js/map.js",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/downloads/cqu-huxi-assistant-skill.zip",
+      "bytes": 382363,
+      "sha256": "eeb53c060fbd51b47e18b22adaff1428be71f0e402cd43185a9a69f32bba283f",
+      "referencedBy": [
+        "js/app.js"
+      ]
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 271,
+      "sha256": "f6976e27b0a6e4b2f48d3c0c9af7d1ff6b6faf1d221ecec0984fb428365585d8",
+      "referencedBy": [
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/freshman2025/building-code.png",
+      "bytes": 119585,
+      "sha256": "ea5adc95dc4522ede0370f70d5614f0eee8be63994b1e864693109ce792f55ed",
+      "referencedBy": [
+        "js/app.js",
+        "js/freshman-content.js"
+      ]
+    },
+    {
+      "path": "assets/freshman2025/classroom-code.png",
+      "bytes": 405985,
+      "sha256": "110cdef762b9b226a70fb446b5ee9d7764d6b2b01000ebd6d4b8fa0c9d8c8505",
+      "referencedBy": [
+        "js/app.js",
+        "js/freshman-content.js"
+      ]
+    },
+    {
+      "path": "assets/freshman2025/first-building.png",
+      "bytes": 334077,
+      "sha256": "7ede1a6f975f5cabd36c121d1db788d92999eec8a77f63272b0cec69a009abf9",
+      "referencedBy": [
+        "js/app.js",
+        "js/community-space.js",
+        "js/freshman-content.js",
+        "js/map.js"
+      ]
+    },
+    {
+      "path": "assets/huxi-campus-line.svg",
+      "bytes": 1378,
+      "sha256": "cd4af41110ca206b4585baa126c0cec660f3228a93e0464767ba04f2fad4d38f",
+      "referencedBy": [
+        "css/daily-overview.css",
+        "css/theme.css",
+        "js/community-space.js"
+      ]
+    },
+    {
+      "path": "assets/huxi-logo.svg",
+      "bytes": 722,
+      "sha256": "facb22e616342435f4cc2ed83f8825f0d38087118e872268218e19d84773dc4b",
+      "referencedBy": [
+        "index.html",
+        "js/app.js",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/huxi-map-clean.webp",
+      "bytes": 206718,
+      "sha256": "2a07ecdab8fc1a9a7bddc6d5b31b23e35745e92d6a030d0116b7eb98f242a351",
+      "referencedBy": [
+        "js/app.js",
+        "js/map-points.js",
+        "js/map.js",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/icons/apple-touch-icon-180.png",
+      "bytes": 2867,
+      "sha256": "581e76ca7ad70342c4d23d727bc5d2074f52952dce38dcc4b578923d5a087998",
+      "referencedBy": [
+        "index.html",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/icons/icon-192.png",
+      "bytes": 3841,
+      "sha256": "014f83eef16d7e78f37bc735b0e9c7001b162d01e88eb41aa9bb3ed562115939",
+      "referencedBy": [
+        "manifest.webmanifest",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/icons/icon-512.png",
+      "bytes": 11523,
+      "sha256": "476393805b0a9904e5b070285b0c1d797ed2162d987ae65cd1efc8fff0099fba",
+      "referencedBy": [
+        "manifest.webmanifest",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/icons/icon-maskable-512.png",
+      "bytes": 8130,
+      "sha256": "2b591a0f6a9a79706d4c72ffd4d3e1dc10f61e2f3c85de8481393340ebf5673a",
+      "referencedBy": [
+        "manifest.webmanifest",
+        "sw.js"
+      ]
+    },
+    {
+      "path": "assets/pwa/screenshot-home.png",
+      "bytes": 147902,
+      "sha256": "0d015da290f0054d39210469d8339b823ab3e2d262a72e4ebdda451e1e4ec569",
+      "referencedBy": [
+        "manifest.webmanifest"
+      ]
+    },
+    {
+      "path": "assets/pwa/screenshot-life.png",
+      "bytes": 141898,
+      "sha256": "84ffebaa342cb312868a990809b7069ec08cba2815dc0a137884b7853427cb57",
+      "referencedBy": [
+        "manifest.webmanifest"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1125x2436.png",
+      "bytes": 22462,
+      "sha256": "a27887289cfbb91fb7d1780675ad9664650d7e03ca2af50bd60d104c6d30abfd",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1170x2532.png",
+      "bytes": 23736,
+      "sha256": "1a45f4593fdf526824fbaf7564ecb0710683445ce34041cb91a6710987ef44a8",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1179x2556.png",
+      "bytes": 23809,
+      "sha256": "62816f5e9b3e22f6372f15416836226693aae0893cd6a0af3222b09c665ac6d8",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1242x2688.png",
+      "bytes": 25896,
+      "sha256": "2e5cb6ea5debb4d47f695dbc62b53199310ee315b3be83cbd6a12ae9df8c6c78",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1284x2778.png",
+      "bytes": 27108,
+      "sha256": "7b0cb581e11c0b1a7253040dbb92fc87b10da88740c61f72ee942ecfb501709b",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1290x2796.png",
+      "bytes": 27524,
+      "sha256": "8c3ffd55ad59b388e11d8bbe265ae0e594b34ca64d8a1f4347bbe5d0b4336ac3",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1488x2266.png",
+      "bytes": 27178,
+      "sha256": "42866031aefdf3009cfc46f441de55326c4b9f4bf35a6223c8ef75d64be909cf",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1536x2048.png",
+      "bytes": 26377,
+      "sha256": "45e8a680d4257a5d14a849eeb2dbce34d0b2ff6aa07fd038c7cecf899d77e413",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1620x2160.png",
+      "bytes": 28424,
+      "sha256": "2851b56cd9f4bf82ca6279c9ab1bf35f28d42fa8c4ae90c7a03a85266f2f1d96",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1640x2360.png",
+      "bytes": 30629,
+      "sha256": "53ed6691ec26256fe3d7bc28e8caa0947cde866835eb617ddebf8d4382fb02dd",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-1668x2388.png",
+      "bytes": 31179,
+      "sha256": "d69a7abd807104fa11bd3e4a80b11c677e1b712e74c150ca302a82e8336b3d62",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-2048x2732.png",
+      "bytes": 41277,
+      "sha256": "d9917b6e491d8c44cb784ce94ec0014845e81c4ed8cffb92eb8399e2c3f62f82",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-750x1334.png",
+      "bytes": 10958,
+      "sha256": "96550959663fee7018468445f72ccc6b0959790e8c12a4745b74e1d85c1b50a3",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "assets/splash/splash-828x1792.png",
+      "bytes": 14086,
+      "sha256": "b392b48e23f34d0b5a683cc23dde8c672bcf6bd4aefac0d7d2a96ddacd87a36f",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/daily-overview.css",
+      "bytes": 5945,
+      "sha256": "e6cdc0e3674b3b0778f6a184ad21506a659b0b57149ab7ecd82a9fa1a581f0f1",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/demo.css",
+      "bytes": 7417,
+      "sha256": "1b5874e7797c202cdbc485937f4d7726e396882198767464af0161b2501e3171",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/dining-experience.css",
+      "bytes": 3437,
+      "sha256": "fa82ccd40fdfdd1b0b6c01cd05bc4b8f6988a5fad5b966a35a26192c355070dd",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/exams.css",
+      "bytes": 3463,
+      "sha256": "4206dc979361cbeda4042cb459730dc17196da7ebe9d914a3915938151eb7c66",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/item-experience.css",
+      "bytes": 2815,
+      "sha256": "6b79eaf7fc8faad29b0a2e36705013a69853d6b6a0d854e8239f5236ed128556",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/map-enhancements.css",
+      "bytes": 6895,
+      "sha256": "8cd1d620793c14fb54cfdbc29c2ac3c42bac23d96b3070f1f37edb94ce1e2605",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/polish.css",
+      "bytes": 29997,
+      "sha256": "b067b49e27e50bab8b9959e29df2bbd01e6696fd7e05f4399263804948be6f75",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/pwa-status.css",
+      "bytes": 4367,
+      "sha256": "4144be49f9df88dac8189e1421fee9e7e134394d5bc1b2011ba3c87b53384fac",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/theme.css",
+      "bytes": 239348,
+      "sha256": "d75194442a95781374dc76158d3787244b83840138c58fec6e44106be88b0d50",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "css/timetable.css",
+      "bytes": 43150,
+      "sha256": "8d2e3fd7e1a38622ed7990096d5734733ec24d5ee4626c82cca9b5066377f5b4",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "index.html",
+      "bytes": 8257,
+      "sha256": "1b228e43ad104a47c3222d78220acd0034b59b29daee7a6375ca32f869f98e32",
+      "referencedBy": [
+        "404.html",
+        "entrypoint",
+        "offline.html"
+      ]
+    },
+    {
+      "path": "js/academic/admission-1.js",
+      "bytes": 4495,
+      "sha256": "f5421e50cc7b5c9c73cdd61262785be5dae7ca72af5e25cf8bf96ce73bae042f",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/assessment-1.js",
+      "bytes": 8790,
+      "sha256": "2fbe2e5f8ca7d682f6a6fe1f37069d703ea9f425c45ca8ddea145e5e6408b206",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/clubs-1.js",
+      "bytes": 11319,
+      "sha256": "b177f8cd9de1b0af172fa65afab968d9841a86800201f7f072335899e93eb51b",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-1.js",
+      "bytes": 35965,
+      "sha256": "6fe23ab221a7d6987966a4ac411ac8a698cb6ff898ba713d98fbf7d55788a579",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-10.js",
+      "bytes": 30336,
+      "sha256": "8186674427d9f1f8d9c6ff7576223a5bd48102786c1d7090da580f1615850eb8",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-11.js",
+      "bytes": 24463,
+      "sha256": "959129855f505ca04624fd25607668441089a8238325c52c66ed243555df69bf",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-12.js",
+      "bytes": 36067,
+      "sha256": "625333ce860d23530bf01569155778d291fe92c55784b9ef805be2edf76c80d8",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-13.js",
+      "bytes": 30959,
+      "sha256": "84250b3dbbfd02a45e035964798cee4155690b997d9da439730723f0461f1831",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-14.js",
+      "bytes": 10567,
+      "sha256": "3514982400f368384319b9cf3f4f6081ab44a0dae75d0176dfe617c94540fb5e",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-2.js",
+      "bytes": 30372,
+      "sha256": "4a6fc6353e509ecc79820749758dd3fbb741e37d36f8d2f0588a04f0c4c7a6c5",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-3.js",
+      "bytes": 27339,
+      "sha256": "cb355edd823cfb451aef7665733560865b5933c8241c59e2c522c77955ca962a",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-4.js",
+      "bytes": 33356,
+      "sha256": "a40fbebfa5dfc4df359b770a135eaca6184e0ac124dc795616403718b0984251",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-5.js",
+      "bytes": 32837,
+      "sha256": "05d44d6dc01bbdaf8c421ff11ddbee96d0c06bdac14830634462e84b291ccdea",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-6.js",
+      "bytes": 23470,
+      "sha256": "1cb37bb15d5f6a4f115c325d144573129c2231a5309e871f7123530491815b0a",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-7.js",
+      "bytes": 29065,
+      "sha256": "a0e88dec6a5026824024dc69fe8fd0e6604a81654dd37af0fd12dec3c5154335",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-8.js",
+      "bytes": 33866,
+      "sha256": "9eeb1d87b33a8d8a2d6a5b4a0cf0b643063b22f76f34e433d1efa198e2b8be3e",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/curricula-9.js",
+      "bytes": 34594,
+      "sha256": "3a90ac3c7b703bb0467f6df6003fdeb6052b45ae5d0aa204a3792aff45ad4eae",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/fitness-1.js",
+      "bytes": 7388,
+      "sha256": "5982d95055982026ded9d54548e9af61227308ada9b8ed5cb2e3b7069e51c531",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/grades-1.js",
+      "bytes": 3181,
+      "sha256": "50cc3f91059ff9a1477357459a7487e468f50a9c0bdaa988f866ca299b81b2f2",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/majors-1.js",
+      "bytes": 3425,
+      "sha256": "707638e13260d91096fd8bd4225bd6e30d6ca43daf8038e73bc72e43e0b8f704",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/postgraduate-1.js",
+      "bytes": 9168,
+      "sha256": "7b2414fdf7e54ad9c898751e30297cc0cc0d2727efc3cc87212ad2bfff89b9e5",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/search-index.js",
+      "bytes": 456563,
+      "sha256": "d48039ef6e81ebea9b4e5020018331a07941360f2cfba4ab6d9a43a3eb3a7c42",
+      "referencedBy": [
+        "js/academic-loader.js"
+      ]
+    },
+    {
+      "path": "js/academic/selection-1.js",
+      "bytes": 3788,
+      "sha256": "40cfecdae4ddcf0daae87bcb8897f04da7dad1d9035b92acc1224803257f356d",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/transfer-1.js",
+      "bytes": 36227,
+      "sha256": "a1e5e241f51e44a7b368d55f442b7e8acf1757fd73469276327b71446f5412fa",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/transfer-2.js",
+      "bytes": 34403,
+      "sha256": "f0dbed095591b1bf780c9c8fe905305400ac540f5b9217b15e13992c580d53c8",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/transfer-3.js",
+      "bytes": 35858,
+      "sha256": "a25461cfab88608579a6ef496ba1ae48d33b7461a4da4cdb41c913db44cad764",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/transfer-4.js",
+      "bytes": 36291,
+      "sha256": "5820e7aa0e04cf1b603f72b138308219b5221e184bc9976060106d6dd84ae6af",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/academic/transfer-5.js",
+      "bytes": 24398,
+      "sha256": "770d36b35fefafa888bcea65b58b06cfba7cd5e3e254cb4ffefc505af2adb626",
+      "referencedBy": [
+        "js/academic-content.js"
+      ]
+    },
+    {
+      "path": "js/bundle-base.js",
+      "bytes": 24915,
+      "sha256": "78b0b1f515f12c15494fbdd7f0250ad4470bf331a1ff3663572d73f1182b6098",
+      "referencedBy": [
+        "js/academic-loader.js",
+        "js/browser-context.js",
+        "js/data.js",
+        "js/demo-clock.js",
+        "js/file-meta.js",
+        "js/item-links.js",
+        "js/report.js",
+        "js/site-config.js",
+        "js/time.js"
+      ]
+    },
+    {
+      "path": "js/bundle-content.js",
+      "bytes": 239507,
+      "sha256": "ba24999401852b25dec3bd525c04ca4613a05f356a70fa611c39d343b8e4d903",
+      "referencedBy": [
+        "js/academic-calendar.js",
+        "js/academic-content.js",
+        "js/atrust-content.js",
+        "js/bed-table.js",
+        "js/calendar-data.js",
+        "js/calendar-guides.js",
+        "js/digital-content.js",
+        "js/dining-experience.js",
+        "js/freshman-academic.js",
+        "js/freshman-content.js",
+        "js/life-content.js",
+        "js/map-points.js",
+        "js/study-content.js"
+      ]
+    },
+    {
+      "path": "js/bundle-ui.js",
+      "bytes": 362233,
+      "sha256": "7a8e2aac031bb46f14b055e63be8a5a667d49e5bafaec7d304c03378bff89e67",
+      "referencedBy": [
+        "js/app.js",
+        "js/backup.js",
+        "js/browser-hint.js",
+        "js/campus-map-art.js",
+        "js/command-palette.js",
+        "js/community-space.js",
+        "js/demo.js",
+        "js/exams.js",
+        "js/geo-links.js",
+        "js/icons.js",
+        "js/map-buildings.js",
+        "js/map.js",
+        "js/onboarding.js",
+        "js/pwa.js",
+        "js/share-card.js",
+        "js/study-space.js",
+        "js/timetable.js"
+      ]
+    },
+    {
+      "path": "js/search-worker.js",
+      "bytes": 990,
+      "sha256": "2852ffb8929123a10c5330aea7b418c2fe833e6c9f8ffb257451a26f8909d1af",
+      "referencedBy": [
+        "js/search.js"
+      ]
+    },
+    {
+      "path": "js/search.js",
+      "bytes": 20656,
+      "sha256": "1a8b23597b4d6c760dbd70359be1ed16f7b598c75e41e677b391c5405877c741",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 1941,
+      "sha256": "b2abdbdbe612260985c48cc6eabe9a5ee8722a0926d692bfa5df43c99dcaae81",
+      "referencedBy": [
+        "index.html"
+      ]
+    },
+    {
+      "path": "offline.html",
+      "bytes": 3257,
+      "sha256": "9bb9d4601654fa7d9e70ba2bf372f9218a877f48b2e3d31b82085ebfa694ed23",
+      "referencedBy": [
+        "sw.js"
+      ]
+    },
+    {
+      "path": "sources/admission-reference-2026.pdf",
+      "bytes": 2959107,
+      "sha256": "2f40855da16946ae88b24734b92c69d181481f46cc2ce21d224bf5c4428952ab",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/admission-1.js"
+      ]
+    },
+    {
+      "path": "sources/admission-statistics-25gk.pdf",
+      "bytes": 298706,
+      "sha256": "f924a2db431b153c654006b12e20919f1ff25c947e7440ca9c6c383cb68540c1",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/admission-1.js"
+      ]
+    },
+    {
+      "path": "sources/aerospace-postgraduate-bonus-2026.docx",
+      "bytes": 24347,
+      "sha256": "f3a0f2e2f33e29a41cf8a8522035fa6554a07145e8d8ed3efbfdeaf94d455fd2",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/postgraduate-1.js"
+      ]
+    },
+    {
+      "path": "sources/clubs-assessment-2025-2026.pdf",
+      "bytes": 548215,
+      "sha256": "7b1463a04344d2e8f6aa388bae7f12f495a7fc76caff45f3cb88e2cf789f2c8f",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/clubs-1.js"
+      ]
+    },
+    {
+      "path": "sources/clubs-directory-2024.pdf",
+      "bytes": 717327,
+      "sha256": "519c602ef991b50e46e332e6539780d8c4f068b03aa4a8db7750efdde5188ef9",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/clubs-1.js"
+      ]
+    },
+    {
+      "path": "sources/clubs-review-2025-2026.pdf",
+      "bytes": 461406,
+      "sha256": "b6b5ce883576a5fbd2f6581e9c03daca182ac99b8ccefb27c2ea880d472e6d4b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/clubs-1.js"
+      ]
+    },
+    {
+      "path": "sources/comprehensive-assessment-2022.pdf",
+      "bytes": 753388,
+      "sha256": "ba7b58a27b85e74a2c3940318c2ef557d40e988cdeb16eb9d40f6301c787de31",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/assessment-1.js",
+        "js/academic/grades-1.js"
+      ]
+    },
+    {
+      "path": "sources/course-selection-student.pdf",
+      "bytes": 2463257,
+      "sha256": "17db03a32b218084a906474be87a4bb891cb82b2684c24c01a80af8213a68996",
+      "referencedBy": [
+        "js/digital-content.js"
+      ]
+    },
+    {
+      "path": "sources/curricula-2026-original.zip",
+      "bytes": 400722,
+      "sha256": "b504683c4f89131b190ced003b1f1de637ff964b5470aae84f318b711717e604",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-1.js",
+        "js/academic/curricula-10.js",
+        "js/academic/curricula-11.js",
+        "js/academic/curricula-12.js",
+        "js/academic/curricula-13.js",
+        "js/academic/curricula-14.js",
+        "js/academic/curricula-2.js",
+        "js/academic/curricula-3.js",
+        "js/academic/curricula-4.js",
+        "js/academic/curricula-5.js",
+        "js/academic/curricula-6.js",
+        "js/academic/curricula-7.js",
+        "js/academic/curricula-8.js",
+        "js/academic/curricula-9.js",
+        "js/academic/majors-1.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-01.txt",
+      "bytes": 7719,
+      "sha256": "6d88a428143a4b3263eac6476796a0a91684369dac8787543f0ab484f648a802",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-1.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-02.txt",
+      "bytes": 8249,
+      "sha256": "7b342dfd7d6b29dc5ef5bd580e89af1399b0193c39663ef8efe4f48c80af740b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-1.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-03.txt",
+      "bytes": 2170,
+      "sha256": "13472343c48dd40f9abff79715afc763db485d9920abb5cfbedde99cdfdf7451",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-1.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-04.txt",
+      "bytes": 2993,
+      "sha256": "c02e869f84a0a92f0500e1f6aec3be2860d82c52f353cd478f5c4cf0d9097ce6",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-1.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-05.txt",
+      "bytes": 2180,
+      "sha256": "4efe3bb8f4a89379e55eca3f0809fa010c41ef31884fdddb56b09620e2c78826",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-1.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-06.txt",
+      "bytes": 2814,
+      "sha256": "b50e54e8f303a7bf03eb6ffb432df0feb22fbf65ff01c232ed57d3d5f7d9f6e6",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-1.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-07.txt",
+      "bytes": 2345,
+      "sha256": "d98511b7fffe0c561dbe30a3480aa816772842bfb548d544b07c483027226b63",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-2.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-08.txt",
+      "bytes": 2877,
+      "sha256": "cc746fb9a64eb6bcd199e00ceceb59eb1015fab910a9417fad464fcad2a54501",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-2.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-09.txt",
+      "bytes": 1776,
+      "sha256": "720f647ae8fe5030a7f6a56bccb02ad19bcc96f4c9daaea6a9cd7decc3b561f0",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-2.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-10.txt",
+      "bytes": 1770,
+      "sha256": "cc110ff08af70c601b2db3d3a9296f1446cceeffacd965b07bf715ea69ef01f1",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-2.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-11.txt",
+      "bytes": 1144,
+      "sha256": "36c9582f257199449f74f4c39d8740bdbfd6a702d3f15c87d0f55a99c32b7a54",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-2.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-12.txt",
+      "bytes": 5033,
+      "sha256": "3f2d52e4c76c44656bd13e7a339271d612e91bac4e0bc6d8ba90695128f97c9a",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-2.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-13.txt",
+      "bytes": 4009,
+      "sha256": "39b8f0e4a1604c54ec998588cec9c0f6b786f6ae8ab7eb37cc9d16575c4f4514",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-2.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-14.txt",
+      "bytes": 12757,
+      "sha256": "16db8c33cff999b02c7a6cad925d0a2ad31b50cef64ed15c3d4a7e0bd7a88d34",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-3.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-15.txt",
+      "bytes": 11043,
+      "sha256": "9ae5830334702055c732c077c2f4728d641886729babb1fffba1c4c99e7641e1",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-3.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-16.txt",
+      "bytes": 10495,
+      "sha256": "f6d3edda1f5a5f48b8a72d526cdf35c81b7e089d0cbaf713a3b4c54222ec44bd",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-4.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-17.txt",
+      "bytes": 6352,
+      "sha256": "63de0081e5a83a485ad0d94e2eb34f86d19b6edbf1b65d97df128f0e70989cec",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-4.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-18.txt",
+      "bytes": 5118,
+      "sha256": "2a2c08ad29032090ab58f2a529724fecfaee531450e96fbca166744969a02821",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-4.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-19.txt",
+      "bytes": 4592,
+      "sha256": "56402bfd3e850911c3fe86e669f54c3b2f25b2342e760702612de45189be0f2c",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-4.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-20.txt",
+      "bytes": 5253,
+      "sha256": "57ab1d1642f98d5b6efadc3789b8eacffb61c1d17567627e740994242a2def08",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-5.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-21.txt",
+      "bytes": 5387,
+      "sha256": "fe8cf2d8f8d505e8610f2a792793403fe8761f7e904388e8f51d7ad33ab8f21a",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-5.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-22.txt",
+      "bytes": 8054,
+      "sha256": "d1589c6c7314d9f1f74ff058e11f1d6e80da019ab2919af2866dec2aee7443f7",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-5.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-23.txt",
+      "bytes": 7408,
+      "sha256": "c5c6f0c5aa5178f7d0790aa5bf288da8b0a8ddae6dfe4060276e482220b883be",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-5.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-24.txt",
+      "bytes": 5408,
+      "sha256": "1a4454ab52b0af9ee1b669ff0eb0506deee1adfac5052099c3619aa0541f6093",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-6.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-25.txt",
+      "bytes": 2595,
+      "sha256": "3279f0ebe63cb67955f7ea0c2ed3d3e18b4e3e90835420458dfccac7b7ac7a5d",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-6.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-26.txt",
+      "bytes": 1170,
+      "sha256": "58279a80ef68debdd148b77468c89d4c0992a5269dbb4a9ddb7b61546640edcd",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-6.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-27.txt",
+      "bytes": 7921,
+      "sha256": "9aae28401322bc2565b64a52ebd072072d6ac930daba929ba4af24fb3d64dec8",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-6.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-28.txt",
+      "bytes": 13796,
+      "sha256": "75c5e51bc22baf43a4af22864e09ee77524d5ebbc42e01ecc3a2f5575a0c58a9",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-7.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-29.txt",
+      "bytes": 11730,
+      "sha256": "a85a5893f76d4ff08a9b7a24d671cfcf87ea36107c7c818a896230373db25975",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-7.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-30.txt",
+      "bytes": 6612,
+      "sha256": "187c39ad680f908e4a4e676f9208eeb72c1f3956eb7ae021ffb449b392b47d19",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-8.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-31.txt",
+      "bytes": 1996,
+      "sha256": "32ff77f98a470745ea0bd0e0e78b8f81bddbdeb0c2f8c5abb3251424893bc0bc",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-8.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-32.txt",
+      "bytes": 5779,
+      "sha256": "f1df66c262f2d93363fa0648475b36f0a479f710da6ba5567d9258db4d575280",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-8.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-33.txt",
+      "bytes": 3626,
+      "sha256": "ba69e3337294b1fcb509cd4889eb94d87b81da890450f2a2e5f1907a305ad0d5",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-8.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-34.txt",
+      "bytes": 7461,
+      "sha256": "f66674ee05864654e56dbc7719c4dc6ead18397b0aa97d79c82674a69c5cd80c",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-8.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-35.txt",
+      "bytes": 8228,
+      "sha256": "d8ef85808fefacf6e964d3ee553628b2d316831652a96e9a09b25c8cb77ed750",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-9.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-36.txt",
+      "bytes": 8109,
+      "sha256": "d7b0dbeb5d00ad5f4fd9c695c8225c465a86c80b16f78a9e124b7ea3e6d5f336",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-9.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-37.txt",
+      "bytes": 6006,
+      "sha256": "918aa5663d4607f032a7cf4c02dda582eabba644757ee79b54c03aeaf1059eae",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-9.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-38.txt",
+      "bytes": 5136,
+      "sha256": "8cff43a985a091789ef4683a415e47ff68480b420c775c17eb61f9eebd43d2e0",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-9.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-39.txt",
+      "bytes": 5981,
+      "sha256": "53496eb149933480fd2c8faade6dde25bbf64d83de1f41a5ff67dad73061dabc",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-10.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-40.txt",
+      "bytes": 7307,
+      "sha256": "6ce05d770f381d4777ad229e07558750a472fe324af3cbb59ab73464596639ce",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-10.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-41.txt",
+      "bytes": 5785,
+      "sha256": "45f461fd0e724813366af82d2440a7b97993f5bbdf6461eb9e43b599dee31797",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-10.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-42.txt",
+      "bytes": 4455,
+      "sha256": "83b847b83c8c42462e4311bea1a4d423a7b8647cc07fb07891dc45532fa74b01",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-10.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-43.txt",
+      "bytes": 6374,
+      "sha256": "90723e2c606037053e16a05de28a5b737e7594ba0d3de84b8d584ef33d653855",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-11.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-44.txt",
+      "bytes": 8976,
+      "sha256": "6ae928c16eb681733209469dee4eb5957e45fb8300bbc1c1c366040f7689235e",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-11.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-45.txt",
+      "bytes": 3939,
+      "sha256": "c0de773a533b74d5dff1fe7f74003e34ab52ac6223eee1177f6997c04fb371b9",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-11.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-46.txt",
+      "bytes": 10847,
+      "sha256": "cfb86d9b4efb19993e1ee26ae1cfa268e5fe73aaac4de74525cccd9245999c13",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-12.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-47.txt",
+      "bytes": 7438,
+      "sha256": "2880a54e8cef6ae5f42beb6f3ddf17004e64843440857ce202fe9473783c3b15",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-12.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-48.txt",
+      "bytes": 6886,
+      "sha256": "1a4f4cbae61864816a6f038683d0dc6b0e2850e37fc842024002b0c3ad9c3e07",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-12.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-49.txt",
+      "bytes": 3953,
+      "sha256": "5240bc2f9f589df8812dfe9c0bc3a7f5dc2eff5581ce8ec224b56ab61fe932ce",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-12.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-50.txt",
+      "bytes": 5521,
+      "sha256": "96987d10388bd174fe4471e821a202243a1cd437b399ad6ab6001004ee96e3aa",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-13.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-51.txt",
+      "bytes": 7002,
+      "sha256": "d51e590221c01d347b499a4914b52335ff1591ca332dd5a00d3e01604f7b1a27",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-13.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-52.txt",
+      "bytes": 3606,
+      "sha256": "39577bc873bccba3b7855707c837311f57d14607ee3af79c1e9014df5c62b6da",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-13.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-53.txt",
+      "bytes": 7656,
+      "sha256": "79e6fbd8f0183f0986afb5a1a096610d58784dc511c264ee3238af42a0d476b0",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-13.js"
+      ]
+    },
+    {
+      "path": "sources/curriculum-54.txt",
+      "bytes": 8579,
+      "sha256": "826accb483f5dbe04be643702a0e40f685c40735b95e48478872957a7fc693e3",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/curricula-14.js"
+      ]
+    },
+    {
+      "path": "sources/dorm-bed-sizes.xlsx",
+      "bytes": 10693,
+      "sha256": "4106e1ee1fba10b1c3ee3a853360674786106f244ce3999b1216c8c08ebd2c21",
+      "referencedBy": [
+        "js/life-content.js"
+      ]
+    },
+    {
+      "path": "sources/english-entry-sample.pdf",
+      "bytes": 313630,
+      "sha256": "01750a5cbe28ace26511f06029100c5b266356974a49687afd4ccd1fdaaf90f0",
+      "referencedBy": [
+        "js/study-content.js"
+      ]
+    },
+    {
+      "path": "sources/fitness-standards-2014.pdf",
+      "bytes": 399738,
+      "sha256": "cb0c7d2d591a93455948b832d32e2e29d5d72598d81f0434aaae2bd6a3f069fc",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/fitness-1.js"
+      ]
+    },
+    {
+      "path": "sources/food-community-list.xlsx",
+      "bytes": 489069,
+      "sha256": "00245a89e55ec66417f08b24b7bd7e27c9ff0217890c4680598cebcf4e0f3626",
+      "referencedBy": [
+        "js/life-content.js"
+      ]
+    },
+    {
+      "path": "sources/healthy-run-blank-commitment-2026.docx",
+      "bytes": 19675,
+      "sha256": "326243bb1863d540512a1eb6147b74dabe3abb633a85d8f02a52dc2752651354",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/fitness-1.js"
+      ]
+    },
+    {
+      "path": "sources/healthy-run-rules-2026.docx",
+      "bytes": 835775,
+      "sha256": "686eebe224b5e4189ffd7d1540907ce427eb5e2fc3e735db1408aa7ba6e6489f",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/fitness-1.js"
+      ]
+    },
+    {
+      "path": "sources/hongshen-selection-2025.docx",
+      "bytes": 15014,
+      "sha256": "c919dde3529c9ea76390f0060f353917ee120e564db9085f87ce19ed0a6b1b3b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/selection-1.js"
+      ]
+    },
+    {
+      "path": "sources/hongshen-selection-blank-form.docx",
+      "bytes": 13093,
+      "sha256": "06b7d275f4fb39b13a4a75c5665166922896219230b5fcba29e950a54acbca80",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/selection-1.js"
+      ]
+    },
+    {
+      "path": "sources/hongshen-selection-schedule.docx",
+      "bytes": 19849,
+      "sha256": "d22ea44cfb931daea79eb11392f38fb5296482056c67039124d8e9b1bd578f04",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/selection-1.js"
+      ]
+    },
+    {
+      "path": "sources/network-fees-2026.pdf",
+      "bytes": 97006,
+      "sha256": "b279d19cb1dbc3fd235b24700bc36bd2a24d0ed375c3962c6161414038228be3",
+      "referencedBy": [
+        "js/digital-content.js"
+      ]
+    },
+    {
+      "path": "sources/network-lanunion-v2.11.pdf",
+      "bytes": 358124,
+      "sha256": "a01bd0073ddf10ddc4939555f736df401b8595cb328504fbb84ef03ded375243",
+      "referencedBy": [
+        "js/digital-content.js"
+      ]
+    },
+    {
+      "path": "sources/network-lanunion-v3.1.2.md",
+      "bytes": 24069,
+      "sha256": "de5d6357c7e4130b0cd241f63c7d616dbd2ae2cb2c0826ece65d2f7b0e4403f4",
+      "referencedBy": [
+        "js/digital-content.js"
+      ]
+    },
+    {
+      "path": "sources/nfc-campus-card.pdf",
+      "bytes": 810133,
+      "sha256": "a521ae93e3056bf88e1218c0400c49d3d5b92c322eb1d00a2c293becfadf48dd",
+      "referencedBy": [
+        "js/digital-content.js"
+      ]
+    },
+    {
+      "path": "sources/postgraduate-electrical-2026.pdf",
+      "bytes": 634124,
+      "sha256": "82c883bc3d4fb35581063a60083d3e4b441645d40a9ec24e19d71f07dd3e4791",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/grades-1.js",
+        "js/academic/postgraduate-1.js"
+      ]
+    },
+    {
+      "path": "sources/postgraduate-rates-2025.pdf",
+      "bytes": 140552,
+      "sha256": "574988ac1a1eaf0c8d778864ed7084d9809f3503a655ab5d5c3fe1ca80c5fec2",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/postgraduate-1.js"
+      ]
+    },
+    {
+      "path": "sources/project-system.pdf",
+      "bytes": 3973207,
+      "sha256": "d9f8d2a7b82bd6805c28c56463d78cee9f082659e60ac4d5c0c61f9dc60bfbcf",
+      "referencedBy": [
+        "js/study-content.js"
+      ]
+    },
+    {
+      "path": "sources/srtp-intro.pptx",
+      "bytes": 25245792,
+      "sha256": "0985d453db2b5d8ba654fdce6480a631c70795270b5eb959b44f5ad4ddb55592",
+      "referencedBy": [
+        "js/study-content.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-01.doc",
+      "bytes": 26624,
+      "sha256": "7e75094a504f1d9bc5e0bed997f4bb768726d9f8232651eca4e2a1d5008b6d91",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-01.txt",
+      "bytes": 2214,
+      "sha256": "53bf6aed27edbcedff7db7817d4e4959996680ea67cf35ecf0788995ce518c55",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-02.doc",
+      "bytes": 37888,
+      "sha256": "187ca171721af25fd373b71b62ea2682497ceb4ff74ff0354d29c6e2ee414ad4",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-02.txt",
+      "bytes": 3557,
+      "sha256": "c6130c8bb2ce9242696485c5bdd91a5e7a61d12dd3b3cd6b175c4fd0c1c0bf95",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-03.doc",
+      "bytes": 34304,
+      "sha256": "f3b63beddf9bbf63616039c834cdca2bc2190f55e2f21b217c8b59908f3478d0",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-03.txt",
+      "bytes": 3645,
+      "sha256": "ba4b12a905696d73be723bb48e3a7b5359be2d6a3901fd98a877f85f3928cc2a",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-04.doc",
+      "bytes": 31232,
+      "sha256": "73a6850b3a5fd6484f997caf704dd43fe2fc53ecd45c2d4f2debf0dba5be5b48",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-04.txt",
+      "bytes": 2361,
+      "sha256": "f0e27e4826d378bdc9156602e6677c0081bf2541e6027458fdf74025d5f8f8eb",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-05.docx",
+      "bytes": 18931,
+      "sha256": "f11b9c551e63fcc60bc1e724e9a668bf274b4d17cc200d314d51b198cbb16452",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-05.txt",
+      "bytes": 2530,
+      "sha256": "668b5c852634b624e1ef9988203a4d7aa24f40859f94b891c669d3a2ad705f7b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-06.doc",
+      "bytes": 25600,
+      "sha256": "f0a6fd3ee9f896ba22bc17d4be4353a61e1aecefd3e55ba724e88dc3a3efc46d",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-06.txt",
+      "bytes": 2383,
+      "sha256": "42eda150a2b9684e5b4d137f55b697154fcc5ece0e2354940bb041e5cc692903",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-07.doc",
+      "bytes": 26624,
+      "sha256": "359018507b3cec9f5b9a3198fe32bfc0873bc37bb3ea01be7d11e3118e300d9d",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-07.txt",
+      "bytes": 1799,
+      "sha256": "b1d01b56e16140784270e7bc238c03fa74e54ed1e5cd28c3ce6dfe5c4117bac7",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-08.docx",
+      "bytes": 19501,
+      "sha256": "5d82b780efc2876f4c409822984fad1a8d880f5310bb0fa6fd93cf8a94e335ba",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-08.txt",
+      "bytes": 1983,
+      "sha256": "5c3552cb1bd0299dd26b1f88e5f90a4f28ce37d170f9c75cc6ed438f4cc40fde",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-1.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-09.doc",
+      "bytes": 26624,
+      "sha256": "55996c188c499f104b51c50cb746c0b2813a0f2e94ce1bce07249241e62281a4",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-09.txt",
+      "bytes": 2297,
+      "sha256": "1d2d58c4f4a3ddaffac5d16c464d75ece68fe18fb27faa3ce4f83675d7310017",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-10.docx",
+      "bytes": 19242,
+      "sha256": "c2a3a5b663c197d8748d2994bf9221b4d6870f5384a8ce83d8a6bcf107649c9c",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-10.txt",
+      "bytes": 2492,
+      "sha256": "864f99280f868abb2e5bec20650ccb1bc0a33114eb00dbece058189719a858d5",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-11.doc",
+      "bytes": 29184,
+      "sha256": "92500b1b01e65b2ca7f922a57e95f8c8efbd75f53a76026c5422f076845c1eda",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-11.txt",
+      "bytes": 2529,
+      "sha256": "53c7603be4dee6dd7a0d7547f46955c300e774a7c5906ff0995af527634a6479",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-12.pdf",
+      "bytes": 113247,
+      "sha256": "300a26d41376fc33654510214ce1592bc2550ad0f67aa03cb922802c261af7e4",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-12.txt",
+      "bytes": 2957,
+      "sha256": "4a0e39e4a872c19aac0ac534cba56a065741f089e53755173ab0a8b854cfa688",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-13.doc",
+      "bytes": 34304,
+      "sha256": "6c89c7032bc23d9508a837424cafd3c66e83290044528e504b75afbef9def8e4",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-13.txt",
+      "bytes": 2704,
+      "sha256": "14402783141266ac709ab1685ff7bb5fe56922d92646297c73c3e94c57cc1212",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-14.pdf",
+      "bytes": 184810,
+      "sha256": "fee3121193c0b0e48c6b7c41519ad72cbf0084b2162d01d34fffc9ff7c01c02f",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-14.txt",
+      "bytes": 4535,
+      "sha256": "d89bf6fe5f1738e19a46230cbe0640956a81a0e42019a3fbcbfe9857c5dca5c8",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-15.pdf",
+      "bytes": 127459,
+      "sha256": "da7c26b7b7d32856cfac7e4f4e97a5fe8061d561e4b0ac1e129d4edac9ccd4a5",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-15.txt",
+      "bytes": 3160,
+      "sha256": "37afa59431c85b2d38e225da4fbd811831aaa37684052261e91973f5f4496242",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-2.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-16.docx",
+      "bytes": 18115,
+      "sha256": "381639f9403cf8651da688b7f84a959420cd7a72e30d278d19808b90c39b9ba6",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-16.txt",
+      "bytes": 2373,
+      "sha256": "92e32afe7ebcc5301406e5cb3e54b982f4a40b33ab31aed5fc9d2a9241a629fd",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-17.docx",
+      "bytes": 12253,
+      "sha256": "7d690ce668fa602760b0fce965c5c776d9823627baabf64d77acebdbde875ad2",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-17.txt",
+      "bytes": 1915,
+      "sha256": "a8c60a72c2482d23d893064615c2582cebebb0768fe5f44b0ef509a46d6406f3",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-18.pdf",
+      "bytes": 160106,
+      "sha256": "6657647eb135e440398bc9fd0b0d406ddfd611a3d40c3c690158e433183aeebb",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-18.txt",
+      "bytes": 3045,
+      "sha256": "89cca121fdc0e84d7ba7dc66221d4ff5812c1b2f19c694999877fe72b7c648c9",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-19.docx",
+      "bytes": 23318,
+      "sha256": "f7106e16538ab164dd81074ea13be8779c9f5d7e995a72754b0b85bae31eb25c",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-19.txt",
+      "bytes": 2887,
+      "sha256": "dac867b6d630e7fabf08853693825db25b747c053fd725775e6c2faaf3b0f48a",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-20.docx",
+      "bytes": 18608,
+      "sha256": "93ed5be3b7dcb432ed004bf08605c32792502d6d8394d6aebb8262df4023608c",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-20.txt",
+      "bytes": 2393,
+      "sha256": "d5fa5a924c13cc17a67c3324616d44b220342fc748bfe5b4f1cfc3954512f11b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-21.doc",
+      "bytes": 29184,
+      "sha256": "c162023642009148c05185e580e66a06bc7b21bb91c97b1ae96f1d3286bdf4dc",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-21.txt",
+      "bytes": 2135,
+      "sha256": "bf7aeb9d4c131a94abb5e8a367a707dfb84aeedaa07eecb8af47406c12703480",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-22.docx",
+      "bytes": 21699,
+      "sha256": "1c1189caf1a382fac66af87e6931ea0ea2cd2cab60936a415e5b879ec5858d45",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-22.txt",
+      "bytes": 2334,
+      "sha256": "34b20695a46193a3254a12532e542c4a2695f6952cd13fa315ae509a274e59aa",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-23.doc",
+      "bytes": 27648,
+      "sha256": "6d7a8a0f782db1f5f8889996f28cd6130158c968ed2c3ecdd2f466ba19634e5b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-23.txt",
+      "bytes": 2214,
+      "sha256": "5db75159336c123b40221d054ec7cd40630d4b719a3cf026bebca7ccab1ac5ef",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-3.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-24.docx",
+      "bytes": 21854,
+      "sha256": "9b69e596d2b43e381e92491a600bc579aeffa1a182111f9e8e191b4f6ab9be3b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-24.txt",
+      "bytes": 2710,
+      "sha256": "eebaabfa8daeb72fd250f74bb55cb92f5f90f475212361497104f78d99679be5",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-25.doc",
+      "bytes": 45568,
+      "sha256": "c275c087e6054cfbd16b078010da07a6f9edede0b8fe5b8303976d1bea2e8b2f",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-25.txt",
+      "bytes": 6848,
+      "sha256": "cc57f981a49b8add091b45260dd22f1d877fdc8a83e24383b9af6195832a2edd",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-26.doc",
+      "bytes": 27136,
+      "sha256": "3dd3f4161adbde88baeb1137662b82c3f7310b743d0a95aa14c9683b7de8ff54",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-26.txt",
+      "bytes": 1980,
+      "sha256": "2eb425edca202ae19e2418f0fe7ed34eb9454abfb03136fda74bc94bb96a8c26",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-27.docx",
+      "bytes": 23586,
+      "sha256": "d753d70d08eb37ef2765b8fff1718b5c8213f89e232ec27c332741910e37cbfb",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-27.txt",
+      "bytes": 3201,
+      "sha256": "1380ca7029e6ec2cbf51c8f9825054b8b2acd2e6176f131ba16f3222059310e8",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-28.docx",
+      "bytes": 19803,
+      "sha256": "1467dca08d88630c4a8b375426ec0e98ff406b86b00af45db898fe2bc4e005c8",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-28.txt",
+      "bytes": 1869,
+      "sha256": "d2d35ab523eabd80c341b845547ad242e5e095a3625c16a42de32bff5886ee05",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-29.docx",
+      "bytes": 19430,
+      "sha256": "bea101a110f63b01965cb0c29e1d08b0c29b55210fd1ed8fdcc3c8c09435a362",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-29.txt",
+      "bytes": 2958,
+      "sha256": "a7eea5ec3494be88148e941fde7fd75100c427f9d7103fc8f3db01dc4fcdc2f7",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-30.docx",
+      "bytes": 17877,
+      "sha256": "256ecc9bf6045f2505dbbec7607ba87f2473062c5046f7e211e3b41175b8e003",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-30.txt",
+      "bytes": 2705,
+      "sha256": "9805ce90cfa723d6f41d230cf8c7b4a6859e3fda9c56a8a1c3293133e3249536",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-4.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-31.docx",
+      "bytes": 20870,
+      "sha256": "8914b0934b1fb2ac3fcf644c52e033e08f2156105736232fd73f9cac81732e5a",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-31.txt",
+      "bytes": 3293,
+      "sha256": "64b5e488b0017113fa023e76d5b3c4cba33aa5135f47904f5e0829c5b223f5af",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-32.docx",
+      "bytes": 19455,
+      "sha256": "de9f7c4eb52032f2e122f0bdbf2c9cb13c48869bc25884f2a2d75ea11ab97e02",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-32.txt",
+      "bytes": 2878,
+      "sha256": "dc56aa1526598ad5882db7f1d386f2cc17737f19bdc0e821a7d7bdf4c978423b",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-33.docx",
+      "bytes": 19182,
+      "sha256": "3d67098d83d2c4ebe06edf6db15315971afc3bc2145edb1a817ead15a141215e",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-33.txt",
+      "bytes": 2531,
+      "sha256": "bb31a175a5b1f2f5913b3c594d8aa1a31c58dbfbdf3e5d234daf868a85caffc6",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-34.docx",
+      "bytes": 19660,
+      "sha256": "5418a64531a18a7c6f715b389cca08ec202c70050e907e4b6ec477a9dbce2fc4",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-34.txt",
+      "bytes": 2525,
+      "sha256": "9a2e6091dcabf2aef0c2d2e9a8034d9d5d3cb68978616a48a7b9d22ab080a867",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/transfer-rules-2025-original.rar",
+      "bytes": 935299,
+      "sha256": "c046bd75e4f628c6158cf0923f79fc6d1d1c8f94059b3d4adba7eb068db174b0",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/transfer-5.js"
+      ]
+    },
+    {
+      "path": "sources/undergraduate-bonus-penalty.pdf",
+      "bytes": 125819,
+      "sha256": "97a245ac074c2b39070bad340c69ff8596179b049fa394203c5801e73eed43c0",
+      "referencedBy": [
+        "js/academic-content.js",
+        "js/academic/assessment-1.js"
+      ]
+    },
+    {
+      "path": "sources/volunteer-hours.pdf",
+      "bytes": 236424,
+      "sha256": "1c6a08a50644bdb60db98f992d0ac132c2fdc54419abe57e0214be7b487c56c5",
+      "referencedBy": [
+        "js/study-content.js"
+      ]
+    },
+    {
+      "path": "sw.js",
+      "bytes": 13075,
+      "sha256": "e3b020a6977069c98104cbbe1773332431a2bbe158ea6801a498db7c544907d2",
+      "referencedBy": [
+        "js/pwa.js"
+      ]
+    }
+  ]
+}

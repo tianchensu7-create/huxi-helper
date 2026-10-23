@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 714" fill="none">
+  <title>虎溪校区位置示意</title>
+  <desc>地点位置沿用用户提供参考图中的坐标。只展示中性分区与位置关系，不绘制自然景观。示意位置，非测绘地图；连接线不代表可通行路线。</desc>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      svg > rect[fill="#f2f5f4"] { fill: #232e2a; }
+      pattern path { stroke: #3d4b44; }
+      g[fill="#e7edeb"] { fill: #303d36; stroke: #4d5c53; }
+      g[fill="#ebeff1"] { fill: #2e3a3c; stroke: #4c5a5d; }
+      g[fill="#eeeae5"] { fill: #3a3831; stroke: #5c574b; }
+      g[fill="#e8ede9"] { fill: #303b33; stroke: #4d5b51; }
+      g[stroke="#c4ceca"] { stroke: #64776b; }
+      g[fill="#66736d"] { fill: #cad4ce; }
+    }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" stroke="#dce3e0" stroke-width=".6"/></pattern>
+  </defs>
+  <rect width="864" height="714" fill="#f2f5f4"/>
+  <rect width="864" height="714" fill="url(#grid)"/>
+  <g fill="#e7edeb" stroke="#cbd5d0" stroke-width="1.5">
+    <rect x="127" y="46" width="103" height="90" rx="12"/>
+    <rect x="244" y="43" width="94" height="92" rx="12"/>
+    <rect x="434" y="46" width="92" height="92" rx="12"/>
+    <rect x="396" y="516" width="107" height="100" rx="12"/>
+  </g>
+  <g fill="#ebeff1" stroke="#cfd8dc" stroke-width="1.5">
+    <rect x="265" y="179" width="137" height="73" rx="12"/>
+    <rect x="530" y="170" width="122" height="68" rx="12"/>
+    <rect x="726" y="121" width="104" height="66" rx="12"/>
+    <rect x="273" y="422" width="116" height="82" rx="12"/>
+    <rect x="256" y="520" width="115" height="68" rx="12"/>
+    <rect x="617" y="297" width="100" height="66" rx="12"/>
+    <rect x="547" y="353" width="84" height="72" rx="12"/>
+  </g>
+  <g fill="#eeeae5" stroke="#d8cfc1" stroke-width="1.5">
+    <rect x="186" y="144" width="61" height="44" rx="10"/>
+    <rect x="356" y="72" width="69" height="50" rx="10"/>
+    <rect x="445" y="479" width="63" height="52" rx="10"/>
+  </g>
+  <g fill="#e8ede9" stroke="#c9d3cd" stroke-width="1.5">
+    <rect x="643" y="55" width="76" height="77" rx="12"/>
+    <rect x="748" y="43" width="82" height="58" rx="12"/>
+    <rect x="95" y="232" width="70" height="50" rx="10"/>
+    <rect x="497" y="434" width="69" height="49" rx="10"/>
+    <rect x="428" y="143" width="81" height="64" rx="12"/>
+  </g>
+  <g stroke="#c4ceca" stroke-width="2" stroke-dasharray="5 7" stroke-linecap="round">
+    <path d="M89 204H663M167 285H748M169 385H628M180 623H540"/>
+    <path d="M107 167V576M416 235V462M693 216V431"/>
+  </g>
+  <g fill="#66736d" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Microsoft YaHei, sans-serif" font-size="12">
+    <text x="37" y="37" font-weight="600">虎溪校区 · 位置关系</text>
+    <text x="178" y="132" text-anchor="middle">松园</text>
+    <text x="291" y="128" text-anchor="middle">竹园</text>
+    <text x="480" y="131" text-anchor="middle">梅园</text>
+    <text x="449" y="604" text-anchor="middle">兰园</text>
+    <text x="330" y="242" text-anchor="middle">学院综合楼</text>
+    <text x="590" y="227" text-anchor="middle">第一教学楼</text>
+    <text x="779" y="180" text-anchor="middle">信息楼</text>
+    <text x="331" y="494" text-anchor="middle">理科楼</text>
+    <text x="313" y="579" text-anchor="middle">工科大楼</text>
+    <text x="665" y="354" text-anchor="middle">艺术楼</text>
+    <text x="590" y="418" text-anchor="middle">图书馆</text>
+    <text x="679" y="125" text-anchor="middle">田径跑道</text>
+    <text x="790" y="96" text-anchor="middle">体育馆</text>
+    <text x="130" y="277" text-anchor="middle">游泳池</text>
+    <text x="531" y="477" text-anchor="middle">网球馆</text>
+    <text x="469" y="199" text-anchor="middle">综合楼</text>
+    <text x="37" y="661" font-weight="600">示意位置，非测绘地图</text>
+    <text x="37" y="685">点位沿用提供的参考图。分区与连接线不代表可通行路线。</text>
+  </g>
+</svg>

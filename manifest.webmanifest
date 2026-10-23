@@ -1,0 +1,78 @@
+{
+  "name": "重大虎溪小助手",
+  "short_name": "虎溪小助手",
+  "description": "重庆大学虎溪校区课表、攻略、校园地图与生活服务指南。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f7fc",
+  "theme_color": "#f5f7fc",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png?v=014f83eef1",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png?v=476393805b",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png?v=2b591a0f6a",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/pwa/screenshot-home.png?v=0d015da290",
+      "sizes": "750x1624",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "首页：今天卡、最近考试与常用入口"
+    },
+    {
+      "src": "assets/pwa/screenshot-life.png?v=84ffebaa34",
+      "sizes": "750x1624",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "生活空间：食堂红黑榜与周边发现"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "我的课表",
+      "short_name": "课表",
+      "description": "打开本周课表",
+      "url": "./index.html#study",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "校园地图",
+      "short_name": "地图",
+      "description": "打开虎溪校区地图",
+      "url": "./index.html#map",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

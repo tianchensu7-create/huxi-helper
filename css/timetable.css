@@ -1,0 +1,2140 @@
+/* 我的课表 + 首页「今天」卡 (2026-10-19). Loaded after ios.css and uses only its tokens:
+   grouped surfaces, system colours, capsule buttons, inset lists and bottom sheets.
+   Course colours follow the iOS system palette; light and dark values are set below. */
+
+body {
+  --tt-c0: #007aff;
+  --tt-c1: #34c759;
+  --tt-c2: #ff9500;
+  --tt-c3: #ff2d55;
+  --tt-c4: #af52de;
+  --tt-c5: #30b0c7;
+  --tt-c6: #5856d6;
+  --tt-c7: #a2845e;
+  --tt-tint: 11%;
+  --tt-block-tint: 16%;
+  --tt-warn-bg: rgb(255 149 0 / 0.14);
+  --tt-warn-ink: #b25000;
+  --tt-switch-on: #34c759;
+}
+body[data-theme='dark'] {
+  --tt-c0: #0a84ff;
+  --tt-c1: #30d158;
+  --tt-c2: #ff9f0a;
+  --tt-c3: #ff375f;
+  --tt-c4: #bf5af2;
+  --tt-c5: #40c8e0;
+  --tt-c6: #5e5ce6;
+  --tt-c7: #ac8e68;
+  --tt-tint: 20%;
+  --tt-block-tint: 26%;
+  --tt-warn-bg: rgb(255 159 10 / 0.18);
+  --tt-warn-ink: #ffb340;
+  --tt-switch-on: #30d158;
+}
+.tt-c0 {
+  --tt-color: var(--tt-c0);
+}
+.tt-c1 {
+  --tt-color: var(--tt-c1);
+}
+.tt-c2 {
+  --tt-color: var(--tt-c2);
+}
+.tt-c3 {
+  --tt-color: var(--tt-c3);
+}
+.tt-c4 {
+  --tt-color: var(--tt-c4);
+}
+.tt-c5 {
+  --tt-color: var(--tt-c5);
+}
+.tt-c6 {
+  --tt-color: var(--tt-c6);
+}
+.tt-c7 {
+  --tt-color: var(--tt-c7);
+}
+
+/* ---------- Home: bento order with the 今天 card first ---------- */
+.home-bento {
+  grid-auto-flow: row dense;
+}
+.home-bento .home-today {
+  grid-column: span 8;
+}
+/* 首页情境卡：按校历阶段切换，替代原来重复列待办的「接下来要做」。 */
+.home-bento .home-context {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* 卡片变窄时让右上角的入口换到标题下面，不把「距集中考试还有 N 天」挤成两行。 */
+.home-context .panel-heading {
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+.home-context .context-note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.home-context.context-rose .panel-eyebrow {
+  color: var(--sys-red, var(--danger));
+}
+.home-context.context-sand .panel-eyebrow {
+  color: var(--ca-orange, var(--accent));
+}
+.home-bento .home-launch {
+  grid-column: span 8;
+}
+.home-bento .home-organization {
+  grid-column: span 4;
+}
+.home-bento .home-documents {
+  grid-column: span 7;
+}
+.home-bento .home-food {
+  grid-column: span 5;
+}
+.home-bento .home-food .compact-food-list {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+.home-today {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  padding: 22px 24px 18px;
+}
+.ht-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+.ht-head > div {
+  min-width: 0;
+}
+.ht-date {
+  margin: 0;
+  font: 600 13px/1.5 var(--font-body);
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+.ht-weekday {
+  margin-right: 8px;
+  color: var(--sys-red-text);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.home-today h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin: 2px 0 0;
+  font: 700 30px/1.2 var(--font-display);
+  letter-spacing: -0.022em;
+  color: var(--ink);
+}
+.ht-phase {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--accent-container);
+  color: var(--accent);
+  font: 600 12.5px/1.4 var(--font-body);
+  letter-spacing: 0;
+}
+.ht-phase-exam {
+  background: var(--tt-warn-bg);
+  color: var(--tt-warn-ink);
+}
+.ht-phase-vacation {
+  background: color-mix(in srgb, var(--tt-c6) 16%, transparent);
+  color: color-mix(in srgb, var(--tt-c6) 80%, var(--ink));
+}
+.ht-open {
+  flex-shrink: 0;
+  min-height: 44px;
+  gap: 2px;
+  white-space: nowrap;
+  color: var(--accent);
+}
+.ht-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: -2px 0 0;
+  padding: 9px 12px;
+  border-radius: 14px;
+  background: var(--tt-warn-bg);
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.ht-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--tt-warn-ink);
+}
+.ht-exam {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 0;
+  padding: 9px 12px;
+  border-radius: 14px;
+  background: var(--surface-secondary);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.ht-exam svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.ht-exam span {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.ht-exam strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.ht-exam button {
+  flex: 0 0 auto;
+}
+
+.ht-body {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+@container (min-width: 560px) {
+  .ht-body {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: start;
+  }
+  .ht-body > .ht-next:only-child {
+    grid-column: 1 / -1;
+  }
+}
+.ht-next {
+  --tt-color: var(--accent);
+  min-width: 0;
+  padding: 14px 16px 16px;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--tt-color) var(--tt-tint), var(--surface-secondary));
+}
+.ht-quiet,
+.ht-cta {
+  background: var(--surface-secondary);
+}
+.ht-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  font: 600 13.5px/1.5 var(--font-body);
+  color: color-mix(in srgb, var(--tt-color) 72%, var(--ink));
+}
+.ht-quiet .ht-status,
+.ht-cta .ht-status {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.ht-cta .ht-status svg {
+  color: var(--accent);
+}
+.ht-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--tt-color);
+}
+.ht-state-now .ht-dot {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--tt-color) 25%, transparent);
+}
+.ht-course {
+  margin: 4px 0 2px;
+  font: 700 22px/1.3 var(--font-display);
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.ht-meta {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.ht-room {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 5px 5px 5px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+}
+.ht-room > svg:first-child {
+  flex-shrink: 0;
+  color: var(--tt-color);
+}
+.ht-room strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.ht-room small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.ht-room-go {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+  min-height: 32px;
+  margin-left: 4px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+.ht-room:hover .ht-room-go {
+  background: var(--accent-strong);
+}
+.ht-quiet-text {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.ht-tomorrow {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.ht-tomorrow svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--muted);
+}
+.ht-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.ht-cta-actions .primary-button {
+  gap: 6px;
+}
+
+.ht-rest {
+  min-width: 0;
+}
+.ht-rest h3 {
+  margin: 2px 4px 4px;
+  font: 600 13px/1.5 var(--font-body);
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+.ht-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ht-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) fit-content(36%);
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 4px;
+  font-size: 14.5px;
+}
+.ht-row + .ht-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 60px;
+  height: 1px;
+  background: var(--line);
+  transform: scaleY(0.6);
+}
+.ht-row-time {
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.ht-row-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  color: var(--ink);
+}
+.ht-row-room {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.ht-row-done .ht-row-name {
+  color: var(--muted);
+  font-weight: 400;
+}
+.ht-row-now .ht-row-room {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.ht-minis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.ht-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  min-height: 60px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--surface-secondary);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.ht-mini:hover {
+  background: var(--fill-2);
+}
+.ht-mini > span:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
+}
+.ht-mini small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--muted);
+}
+.ht-mini strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+.ht-footnote {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* ---------- Study: 我的课表 section ---------- */
+#study-space .tt-panel {
+  margin: 0 0 24px;
+}
+#study-space .tt-heading {
+  align-items: center;
+  margin-bottom: 12px;
+}
+.tt-term-line {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.tt-heading-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  align-items: center;
+}
+.tt-empty-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+/* 右上角的圆形操作：「＋」添加课程、「…」更多。 */
+#study-space .tt-icon-action {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--fill-1);
+  color: var(--ink);
+  list-style: none;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+#study-space .tt-icon-action::-webkit-details-marker {
+  display: none;
+}
+#study-space .tt-icon-action:hover {
+  background: var(--fill-2);
+}
+#study-space .tt-icon-action:active {
+  transform: scale(0.94);
+}
+#study-space .tt-icon-primary,
+#study-space .tt-icon-primary:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.tt-more {
+  position: relative;
+}
+.tt-more[open] > summary {
+  background: var(--fill-2);
+}
+.tt-more-menu {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  min-width: 196px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 16px 40px rgb(15 23 42 / 16%);
+  animation: tt-menu-in 0.16s ease-out;
+}
+.tt-more-menu button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: var(--ink);
+  font: 500 14.5px/1.3 var(--font-body);
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.tt-more-menu button svg {
+  color: var(--accent);
+}
+.tt-more-menu button:hover,
+.tt-more-menu button:focus-visible {
+  background: var(--fill-1);
+}
+@keyframes tt-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tt-more-menu {
+    animation: none;
+  }
+}
+:is(#study-space, #tt-sheet) .tt-pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--fill-1);
+  color: var(--accent);
+  font: 600 14.5px/1.3 var(--font-body);
+  white-space: nowrap;
+  box-shadow: none;
+}
+:is(#study-space, #tt-sheet) .tt-pill-button:hover {
+  background: var(--fill-2);
+}
+:is(#study-space, #tt-sheet) .tt-pill-primary,
+:is(#study-space, #tt-sheet) .tt-pill-primary:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+:is(#study-space, #tt-sheet) .tt-pill-primary:hover {
+  background: var(--accent-strong);
+}
+:is(#study-space, #tt-sheet) .tt-pill-button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+:is(#study-space, #tt-sheet) .tt-danger {
+  color: var(--sys-red-text);
+}
+#study-space .tt-text-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--accent);
+  font: 600 13.5px/1.3 var(--font-body);
+  white-space: nowrap;
+}
+#study-space .tt-text-button:hover {
+  background: var(--fill-1);
+}
+#study-space .tt-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--muted);
+}
+#study-space .tt-icon-button:hover {
+  background: var(--fill-1);
+  color: var(--ink);
+}
+
+.tt-notice-slot:empty {
+  display: none;
+}
+.tt-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding: 4px 4px 4px 14px;
+  border-radius: 14px;
+  background: var(--accent-container);
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.tt-notice > svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.tt-notice > span {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 0;
+  overflow-wrap: anywhere;
+}
+.tt-notice-error {
+  background: color-mix(in srgb, var(--sys-red) 12%, transparent);
+  color: var(--sys-red-text);
+}
+.tt-notice-error > svg {
+  color: var(--sys-red-text);
+}
+
+.tt-weekbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  min-width: 0;
+}
+#study-space .tt-round-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--fill-1);
+  color: var(--ink);
+}
+#study-space .tt-round-button:hover {
+  background: var(--fill-2);
+}
+#study-space .tt-round-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.tt-prev svg {
+  transform: rotate(180deg);
+}
+.tt-week-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+.tt-week-label strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 700 18px/1.35 var(--font-display);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.tt-week-label > span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tt-week-label .tt-phase-exam {
+  color: var(--tt-warn-ink);
+}
+.tt-week-label .tt-phase-vacation {
+  color: color-mix(in srgb, var(--tt-c6) 80%, var(--ink));
+}
+.tt-this-week {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-container);
+  color: var(--accent);
+  font: 600 12px/1.5 var(--font-body);
+}
+.tt-today-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 9px 12px;
+  border-radius: 14px;
+  background: var(--tt-warn-bg);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.tt-today-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--tt-warn-ink);
+}
+
+/* ---------- 学期与归档 ---------- */
+.tt-term-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--accent-container);
+  color: var(--ink);
+}
+.tt-term-banner > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent);
+}
+.tt-term-banner > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 0;
+}
+.tt-term-banner p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.tt-term-banner .tt-text-button {
+  margin-left: -10px;
+}
+.tt-term-list {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tt-term-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.tt-term-row:last-child {
+  border-bottom: 0;
+}
+.tt-term-row > div {
+  display: flex;
+  flex: 1 1 200px;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.tt-term-row strong {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.tt-term-row em {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-container);
+  color: var(--accent);
+  font: 600 12px/1.5 var(--font-body);
+  font-style: normal;
+}
+.tt-term-row small {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.tt-term-row .tt-text-button {
+  margin-left: auto;
+}
+.tt-term-current strong {
+  color: var(--accent);
+}
+.tt-form-term {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: var(--fill-1);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.tt-form-term > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tt-form-term > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Day view (phones) */
+.tt-day-chips {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+  padding: 3px;
+  border-radius: 18px;
+  background: var(--seg-track);
+}
+#study-space .tt-day-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  min-width: 0;
+  min-height: 58px;
+  padding: 6px 0 5px;
+  border: 0;
+  border-radius: 15px;
+  background: none;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.tt-day-chip > span {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--muted);
+}
+.tt-day-chip > small {
+  font: 600 17px/1.3 var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+.tt-day-chip.tt-today > small {
+  color: var(--sys-red-text);
+}
+.tt-day-dot {
+  width: 5px;
+  height: 5px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.tt-empty-dot {
+  visibility: hidden;
+}
+#study-space .tt-day-chip.tt-selected {
+  background: var(--seg-thumb);
+  box-shadow:
+    0 3px 8px rgb(0 0 0 / 0.12),
+    0 1px 1px rgb(0 0 0 / 0.04);
+}
+body[data-theme='dark'] #study-space .tt-day-chip.tt-selected {
+  box-shadow: none;
+}
+.tt-day-chip.tt-selected > span {
+  color: var(--ink);
+  font-weight: 600;
+}
+.tt-day-title {
+  margin: 14px 4px 8px;
+  font: 600 13px/1.5 var(--font-body);
+  color: var(--muted);
+}
+#study-space .tt-card-list {
+  display: grid;
+  gap: 8px;
+}
+#study-space .tt-card {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  min-height: 76px;
+  padding: 12px 10px 12px 14px;
+  border: 0;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--tt-color) var(--tt-tint), var(--surface-secondary));
+  color: var(--ink);
+  font-family: var(--font-body);
+  text-align: left;
+}
+#study-space .tt-card:hover {
+  background: color-mix(
+    in srgb,
+    var(--tt-color) calc(var(--tt-tint) + 6%),
+    var(--surface-secondary)
+  );
+}
+.tt-card-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 44px;
+  font-variant-numeric: tabular-nums;
+}
+.tt-card-time strong {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.tt-card-time small {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.tt-card-bar {
+  flex: 0 0 4px;
+  border-radius: 2px;
+  background: var(--tt-color);
+}
+.tt-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+}
+.tt-card-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.tt-card-meta {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.tt-room {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.tt-room svg {
+  color: var(--tt-color);
+}
+#study-space .tt-card > svg:last-child {
+  align-self: center;
+  color: var(--muted);
+  opacity: 0.7;
+}
+.tt-off-tag {
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--fill-1);
+  color: var(--muted);
+  font: 500 12px/1.6 var(--font-body);
+}
+#study-space .tt-card.tt-off-week {
+  background: var(--fill-1);
+  opacity: 0.72;
+}
+#study-space .tt-card.tt-off-week .tt-card-bar {
+  background: repeating-linear-gradient(180deg, var(--tt-color) 0 4px, transparent 4px 7px);
+}
+.tt-day-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 18px 14px;
+  border-radius: 18px;
+  background: var(--surface-secondary);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+.tt-linked {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Week grid (tablets and desktop) */
+.tt-grid-wrap {
+  display: none;
+}
+.tt-grid {
+  display: grid;
+  grid-template-columns: 50px repeat(7, minmax(0, 1fr));
+  grid-template-rows: auto repeat(4, 50px) 10px repeat(5, 50px) 10px repeat(3, 50px);
+  min-width: 0;
+}
+.tt-grid-corner {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: end;
+  padding: 0 0 8px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+.tt-grid-day {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 0 8px;
+  line-height: 1.35;
+}
+.tt-grid-day span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.tt-grid-day small {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tt-grid-day.tt-today span,
+.tt-grid-day.tt-today small {
+  color: var(--sys-red-text);
+}
+.tt-grid-lesson {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--line);
+  line-height: 1.3;
+}
+.tt-grid-lesson b {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.tt-grid-lesson small {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tt-grid-cell {
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.tt-grid-cell.tt-weekend {
+  background: color-mix(in srgb, var(--fill-1) 50%, transparent);
+}
+.tt-grid-break {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  background: var(--fill-1);
+}
+#study-space .tt-block {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-self: stretch;
+  justify-self: start;
+  width: calc((100% - 4px) / var(--lanes, 1));
+  min-width: 0;
+  min-height: 44px;
+  margin: 2px 0 2px calc(2px + (100% - 4px) * var(--lane, 0) / var(--lanes, 1));
+  padding: 5px 7px 5px 9px;
+  overflow: hidden;
+  border: 0;
+  border-left: 3px solid var(--tt-color);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--tt-color) var(--tt-block-tint), var(--content-fill));
+  color: var(--ink);
+  font-family: var(--font-body);
+  text-align: left;
+}
+#study-space .tt-block:hover {
+  background: color-mix(
+    in srgb,
+    var(--tt-color) calc(var(--tt-block-tint) + 8%),
+    var(--content-fill)
+  );
+}
+.tt-block strong {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.tt-block span,
+.tt-block em {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-style: normal;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.tt-block-short strong {
+  -webkit-line-clamp: 1;
+}
+#study-space .tt-block.tt-off-week {
+  border-left-style: dashed;
+  background: var(--fill-1);
+  opacity: 0.7;
+}
+
+.tt-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-top: 12px;
+}
+#study-space .tt-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: 500 14px/1.4 var(--font-body);
+}
+.tt-toggle-track {
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--fill-2);
+  transition: background-color 0.2s;
+}
+.tt-toggle-track span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.2);
+  transition: transform 0.2s;
+}
+.tt-toggle[aria-pressed='true'] .tt-toggle-track {
+  background: var(--tt-switch-on);
+}
+.tt-toggle[aria-pressed='true'] .tt-toggle-track span {
+  transform: translateX(18px);
+}
+.tt-count {
+  font-size: 12.5px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tt-footnote {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.tt-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 12px 14px;
+  border-radius: 18px;
+  background: var(--surface-secondary);
+  color: var(--muted);
+  text-align: center;
+}
+.tt-empty > svg {
+  width: 30px;
+  height: 30px;
+  color: var(--accent);
+}
+.tt-empty p {
+  max-width: 30ch;
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.tt-empty-actions {
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .tt-day-view {
+    display: none;
+  }
+  .tt-grid-wrap {
+    display: block;
+  }
+}
+
+/* ---------- Sheets (native modal dialog) ---------- */
+/* style.css resets every margin to 0, which would pin the modal to the top-left corner; centre it again. */
+.tt-sheet {
+  width: min(560px, calc(100% - 32px));
+  max-width: calc(100% - 32px);
+  max-height: min(880px, calc(100dvh - 48px));
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 0;
+  border-radius: 28px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 15px/1.6 var(--font-body);
+  box-shadow: var(--shadow-float);
+}
+.tt-sheet[data-mode='import'] {
+  width: min(640px, calc(100% - 32px));
+}
+.tt-sheet[open] {
+  animation: ios-sheet-in 0.42s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.tt-sheet::backdrop {
+  background: rgb(0 0 0 / 0.3);
+}
+body[data-theme='dark'] .tt-sheet::backdrop {
+  background: rgb(0 0 0 / 0.62);
+}
+.tt-sheet-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 8px;
+  min-height: 58px;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--popover-fill);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+body[data-readability='solid'] .tt-sheet-bar,
+body[data-readability='high-contrast'] .tt-sheet-bar,
+body[data-no-blur='true'] .tt-sheet-bar {
+  background: var(--surface);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.tt-sheet-bar h2 {
+  grid-column: 2;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: 600 17px/1.4 var(--font-display);
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.tt-sheet-grabber {
+  display: none;
+}
+.tt-sheet-close {
+  grid-column: 3;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--fill-1);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.tt-sheet-close:hover {
+  background: var(--fill-2);
+}
+.tt-sheet-body {
+  padding: 18px 20px 24px;
+}
+.tt-sheet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tt-detail-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.tt-detail-swatch {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--tt-color);
+}
+.tt-sheet .ios-list {
+  background: var(--surface-secondary);
+}
+.tt-sheet .ios-row-label small {
+  overflow-wrap: anywhere;
+}
+.tt-sheet .ios-row-value {
+  font-size: 13.5px;
+}
+.tt-pre {
+  white-space: pre-line;
+}
+.tt-links {
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--surface-secondary);
+}
+.tt-link-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 54px;
+  margin: 0;
+  padding: 8px 16px;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: 500 15px/1.4 var(--font-body);
+  text-align: left;
+  cursor: pointer;
+}
+.tt-link-row + .tt-link-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 46px;
+  height: 1px;
+  background: var(--line);
+  transform: scaleY(0.6);
+}
+.tt-link-row:hover {
+  background: var(--fill-1);
+}
+.tt-link-row > span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.tt-link-row small {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.tt-link-row > svg:last-child {
+  color: var(--muted);
+  opacity: 0.7;
+}
+.tt-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--tt-warn-bg);
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.tt-warning svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--tt-warn-ink);
+}
+.tt-conflict:empty {
+  display: none;
+}
+.tt-conflict .tt-warning {
+  margin: 0;
+}
+
+.tt-form {
+  display: grid;
+  gap: 16px;
+}
+.tt-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+}
+.tt-field > span,
+.tt-field > label {
+  font: 600 13.5px/1.4 var(--font-body);
+  color: var(--ink-soft);
+}
+.tt-field > span small,
+.tt-field > label small {
+  margin-left: 4px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.tt-field b {
+  color: var(--sys-red-text);
+  font-weight: 600;
+}
+.tt-sheet :is(input[type='text'], select, textarea) {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: var(--surface-secondary);
+  color: var(--ink);
+  font: 16px/1.5 var(--font-body);
+  box-shadow: none;
+  font-size: 16px;
+}
+.tt-sheet select {
+  padding-right: 8px;
+  cursor: pointer;
+}
+.tt-sheet textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+.tt-sheet :is(input[type='text'], select, textarea):focus {
+  border-color: var(--accent);
+  background: var(--surface);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.tt-sheet :is(input, textarea)::placeholder {
+  color: var(--muted);
+  opacity: 0.85;
+}
+.tt-sheet [aria-invalid='true'] {
+  border-color: var(--sys-red);
+}
+.tt-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.tt-field-row > :first-child {
+  grid-column: 1 / -1;
+}
+.tt-field-hint,
+.tt-field-error {
+  margin: -4px 0 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.tt-field > .tt-field-hint,
+.tt-field > .tt-field-error {
+  margin: 0;
+  font-weight: 400;
+}
+.tt-field-error {
+  color: var(--sys-red-text);
+}
+.tt-field-error:empty {
+  display: none;
+}
+.tt-error-text {
+  color: var(--sys-red-text);
+}
+#tt-f-weeks-preview:not(.tt-error-text) {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.tt-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tt-quick button {
+  min-height: 44px;
+  padding: 6px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--fill-1);
+  color: var(--ink);
+  font: 500 13.5px/1.3 var(--font-body);
+  cursor: pointer;
+}
+.tt-quick button:hover {
+  background: var(--fill-2);
+}
+.tt-quick button[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+.tt-import-intro {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.tt-import-sample {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 16px;
+}
+.tt-import-sample code {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: var(--fill-1);
+  color: var(--ink);
+  font:
+    12.5px/1.5 ui-monospace,
+    'Cascadia Mono',
+    Consolas,
+    monospace;
+  overflow-wrap: anywhere;
+}
+.tt-sheet #tt-import-text {
+  min-height: 150px;
+  font-size: 16px;
+}
+.tt-import-honest {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 10px 0 14px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.tt-import-honest svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.tt-import-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2px 10px;
+  margin: 6px 4px 8px;
+  font: 600 14.5px/1.4 var(--font-body);
+  color: var(--ink);
+}
+.tt-import-heading span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.tt-import-failed-heading {
+  margin-top: 16px;
+  color: var(--sys-red-text);
+}
+.tt-import-list,
+.tt-import-failed {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tt-import-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 44px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--surface-secondary);
+  cursor: pointer;
+}
+.tt-import-row input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.tt-import-row.tt-unchecked {
+  opacity: 0.6;
+}
+.tt-import-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.tt-import-main strong {
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.tt-import-main > span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.tt-import-main em {
+  font-size: 12.5px;
+  font-style: normal;
+  color: var(--tt-warn-ink);
+}
+.tt-import-main small,
+.tt-import-failed small {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.tt-import-failed li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--sys-red) 9%, transparent);
+}
+.tt-import-failed small {
+  color: var(--sys-red-text);
+}
+.tt-import-failed span {
+  font-size: 13.5px;
+  overflow-wrap: anywhere;
+}
+.tt-import-empty {
+  margin: 6px 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+body[data-readability='high-contrast']
+  :is(.tt-card, .tt-block, .ht-next, .ht-mini, .tt-import-row) {
+  outline: 1px solid var(--line-strong);
+  outline-offset: -1px;
+}
+/* Keep the keyboard focus ring stronger than the high-contrast hairline above. */
+body[data-readability='high-contrast'] :is(.tt-card, .tt-block, .ht-next, .ht-mini):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  /* 首页卡片跨度交给 12 栏网格：8/4 与 7/5 在 768–1200px 仍然成立。
+     这里原来写死「今天、常用入口整行，其余各占 1 栏」，那是两栏时代的写法，
+     在 12 栏下会变成一条条 47px 的窄条。 */
+  .home-bento .home-launch {
+    grid-column: span 7;
+  }
+  .home-bento .home-organization {
+    grid-column: span 5;
+  }
+  .home-bento .home-food .compact-food-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (min-width: 520px) {
+  .tt-field-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .tt-field-row > :first-child {
+    grid-column: auto;
+  }
+}
+@media (max-width: 650px) {
+  .home-today {
+    gap: 12px;
+    padding: 16px 16px 14px;
+  }
+  .home-today h1 {
+    font-size: 27px;
+  }
+  .ht-course {
+    font-size: 20px;
+  }
+  .ht-next {
+    padding: 12px 14px 14px;
+  }
+  .ht-room {
+    margin-top: 10px;
+  }
+  .ht-minis {
+    gap: 8px;
+  }
+  .ht-mini {
+    gap: 8px;
+    min-height: 56px;
+    padding: 8px 10px;
+  }
+  .ht-mini .ios-glyph {
+    width: 28px;
+    height: 28px;
+  }
+  .tt-sheet {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100dvh - 32px);
+    margin: auto 0 0;
+    border-radius: 28px 28px 0 0;
+  }
+  .tt-sheet[data-mode='import'] {
+    width: 100%;
+  }
+  .tt-sheet[open] {
+    animation: ios-sheet-up 0.42s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .tt-sheet-bar {
+    padding-top: 14px;
+  }
+  .tt-sheet-grabber {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    display: block;
+    width: 36px;
+    height: 5px;
+    margin-left: -18px;
+    border-radius: 3px;
+    background: var(--line-strong);
+  }
+  .tt-sheet-body {
+    padding: 16px 16px max(24px, env(safe-area-inset-bottom));
+  }
+  .tt-sheet-actions {
+    position: sticky;
+    bottom: 0;
+    margin: 18px -16px -24px;
+    padding: 12px 16px max(14px, env(safe-area-inset-bottom));
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+  }
+  .tt-sheet-actions .tt-pill-button {
+    flex: 1;
+  }
+}
+@media (max-width: 360px) {
+  .tt-field-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-today h1 {
+    font-size: 25px;
+  }
+  .ht-minis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ht-room small {
+    display: none;
+  }
+  .tt-card-time {
+    flex-basis: 40px;
+  }
+  #study-space .tt-card {
+    gap: 10px;
+    padding-left: 12px;
+  }
+  .tt-weekbar {
+    flex-wrap: wrap;
+    gap: 4px 6px;
+  }
+  .tt-week-label > span {
+    white-space: normal;
+  }
+  #study-space .tt-back-week {
+    order: 4;
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tt-sheet[open] {
+    animation: none;
+  }
+  .tt-toggle-track,
+  .tt-toggle-track span {
+    transition: none;
+  }
+}
+
+/* 调课/停课：只标注某一天，列表与表单沿用学期面板的样式语言。 */
+.tt-adjust-note {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--fill-1);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.tt-adjust-note svg {
+  flex: none;
+  margin-top: 1px;
+  color: var(--accent);
+}
+.tt-adjust-open {
+  margin-left: auto;
+}
+.tt-adjust-title {
+  margin: 18px 0 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+.tt-adjust-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tt-adjust-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.tt-adjust-row div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.tt-adjust-row strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.tt-adjust-row span {
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 「现在」：今天这一列底色、当前时刻线、正在上的课 ---------- */
+.tt-grid-today-col {
+  z-index: 0;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  pointer-events: none;
+}
+.tt-now {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+/* 整周一条淡线，今天那一格画实线和圆点。 */
+.tt-now::before {
+  content: '';
+  position: absolute;
+  top: var(--now);
+  right: 0;
+  left: 0;
+  border-top: 1px dashed color-mix(in srgb, var(--sys-red) 45%, transparent);
+}
+.tt-now-line {
+  position: absolute;
+  top: var(--now);
+  left: calc(100% / 7 * var(--now-day));
+  width: calc(100% / 7);
+  height: 2px;
+  margin-top: -1px;
+  border-radius: 2px;
+  background: var(--sys-red);
+}
+.tt-now-line::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sys-red);
+}
+.tt-now-time {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  pointer-events: none;
+}
+.tt-now-time span {
+  position: absolute;
+  top: var(--now);
+  left: 50%;
+  padding: 1px 5px;
+  border-radius: 6px;
+  background: var(--sys-red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+  transform: translate(-50%, -50%);
+}
+#study-space .tt-block.tt-now-block {
+  box-shadow:
+    0 0 0 2px var(--tt-color),
+    0 6px 16px color-mix(in srgb, var(--tt-color) 30%, transparent);
+}
+#study-space .tt-card.tt-card-now {
+  position: relative;
+  box-shadow:
+    0 0 0 2px var(--tt-color),
+    0 8px 20px color-mix(in srgb, var(--tt-color) 22%, transparent);
+}
+#study-space .tt-card.tt-card-now::after {
+  content: '上课中';
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--tt-color);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.tt-now-divider {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 2px 0;
+  color: var(--sys-red-text);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  list-style: none;
+}
+.tt-now-divider::before,
+.tt-now-divider::after {
+  content: '';
+  height: 2px;
+  border-radius: 2px;
+  background: var(--sys-red);
+}
+.tt-now-divider::before {
+  flex: 0 0 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.tt-now-divider::after {
+  flex: 1;
+}
+.tt-now-divider span {
+  white-space: nowrap;
+}
+.tt-now-divider.tt-now-after {
+  color: var(--muted);
+}
+
+/* 滑动换天 / 换周：新内容从滑动方向轻轻进来。 */
+@media (prefers-reduced-motion: no-preference) {
+  .tt-slide-next {
+    animation: tt-slide-next 0.22s ease-out;
+  }
+  .tt-slide-prev {
+    animation: tt-slide-prev 0.22s ease-out;
+  }
+}
+@keyframes tt-slide-next {
+  from {
+    opacity: 0.4;
+    transform: translateX(24px);
+  }
+}
+@keyframes tt-slide-prev {
+  from {
+    opacity: 0.4;
+    transform: translateX(-24px);
+  }
+}
+
+/* 周次小方格：点一下选中 / 取消，考试周等教学周之外的格子淡一些。 */
+.tt-week-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+  gap: 6px;
+  margin: 2px 0 8px;
+}
+.tt-week-cell {
+  min-height: 38px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 14px/1 var(--font-body);
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    transform 0.12s ease;
+}
+.tt-week-cell:hover {
+  border-color: var(--accent);
+}
+.tt-week-cell:active {
+  transform: scale(0.94);
+}
+.tt-week-cell[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.tt-week-cell.tt-week-extra:not([aria-pressed='true']) {
+  border-style: dashed;
+  color: var(--muted);
+}
+.tt-field .tt-quick {
+  margin-bottom: 8px;
+}
+.tt-field .tt-quick button {
+  min-height: 36px;
+  padding: 4px 12px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tt-week-cell:active {
+    transform: none;
+  }
+}

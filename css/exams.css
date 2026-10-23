@@ -1,0 +1,214 @@
+/* 考试安排面板：沿用课表与今天卡的卡片语言，表单控件最小 16px 避免 iOS 聚焦缩放。 */
+.exams-panel {
+  margin-top: 18px;
+  padding: 18px 18px 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+}
+
+.exams-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.exams-kicker {
+  margin: 0 0 4px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.exams-head h2 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.exams-summary {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.exams-add {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-secondary);
+  color: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.exams-add:hover {
+  border-color: var(--line-strong);
+}
+
+.exams-form {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface-secondary);
+}
+
+.exams-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+}
+
+.exams-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.exams-field input {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: inherit;
+  /* iOS 上小于 16px 的输入框聚焦会放大整页。 */
+  font-size: 16px;
+}
+
+.exams-field-wide {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.exams-error {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #c0392b;
+}
+
+.exams-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.exams-text,
+.exams-submit {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.exams-text {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: inherit;
+}
+
+.exams-submit {
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #fff;
+}
+
+.exams-list {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exams-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.exams-past {
+  opacity: 0.62;
+}
+
+.exams-row-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.exams-row-head strong {
+  font-size: 15px;
+}
+
+.exams-countdown {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.exams-countdown-past {
+  color: var(--muted);
+}
+
+.exams-meta,
+.exams-note {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.exams-row-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.exams-icon {
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.exams-danger {
+  color: #c0392b;
+}
+
+.exams-empty {
+  margin: 14px 0 0;
+  padding: 14px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .exams-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exams-row {
+    flex-direction: column;
+  }
+}

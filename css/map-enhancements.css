@@ -1,0 +1,82 @@
+.map-search { margin: 0 0 18px; }
+.map-search > label { display: block; margin-bottom: 8px; font-weight: 650; }
+.map-search-row { display: flex; gap: 8px; }
+.map-search-row input { flex: 1; min-width: 0; min-height: 46px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface, var(--fill-1)); color: var(--text); font: inherit;
+  font-size: 16px;
+}
+.map-search-row > button, .map-interaction > button { flex-shrink: 0; min-height: 44px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 11px; background: var(--fill-1); color: var(--accent); font: inherit; font-weight: 600; }
+.map-search-status { min-height: 1.6em; margin: 7px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.map-toolbar { align-items: flex-start; }
+.map-filters { flex-wrap: wrap; }
+.map-interaction { display: flex; align-items: center; gap: 10px; padding: 8px 18px 12px; }
+.map-interaction-hint { flex: 1; min-width: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.map-explorer .map-controls { position: static; display: flex; align-items: center; justify-content: center; gap: 7px; width: auto; margin: 10px 12px; padding: 3px; box-shadow: none; background: var(--fill-1); border-radius: 12px; }
+.map-explorer .map-controls .map-reset { margin: 0; border-top: 0; border-left: 1px solid var(--line); border-radius: 0; }
+.map-explorer .map-zoom-level { min-width: 50px; }
+.map-explorer .map-viewport { overflow: hidden; overscroll-behavior: auto; touch-action: pan-y; }
+.map-explorer.map-is-interacting .map-viewport { overflow: auto; touch-action: none; cursor: grab; }
+.map-explorer .map-viewport.map-is-dragging { cursor: grabbing; user-select: none; }
+.map-is-interacting [data-map-interact] { background: var(--accent); color: var(--accent-text, #fff); }
+.map-pin .map-pin-symbol { width: 27px; height: 27px; }
+.map-pin .map-pin-symbol > svg { width: 15px; height: 15px; }
+.map-pin.map-is-selected { z-index: 8; }
+.map-place-list { overscroll-behavior: auto; }
+.map-building-guide { margin: 12px 0; }
+.map-building-guide summary { cursor: pointer; min-height: 36px; color: var(--accent); font-weight: 600; }
+.map-building-guide img { display: block; width: 100%; height: auto; margin-top: 6px; border-radius: 8px; background: #fff; }
+.map-related { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.map-related > span { flex-basis: 100%; font-size: 12px; color: var(--muted); }
+.map-related > button { min-height: 36px; padding: 6px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--fill-1); color: var(--accent); text-align: left; font: inherit; font-size: 12px; }
+@media (max-width: 600px) {
+  .map-explorer .map-viewport { height: clamp(290px, 84vw, 430px); }
+  .map-interaction { padding-inline: 12px; }
+  .map-pin .map-pin-symbol { width: 23px; height: 23px; }
+  .map-pin .map-pin-symbol > svg { width: 13px; height: 13px; }
+  .map-search-row > button { padding-inline: 12px; }
+}
+/* 楼栋坐标：三平台跳转与侧栏坐标表 */
+.map-geo { display: grid; gap: 6px; margin: 12px 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--fill-1); }
+.map-geo > span { font-size: 12px; color: var(--muted); }
+.map-geo-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.map-geo-links > a { display: inline-flex; align-items: center; min-height: 36px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface, #fff); color: var(--accent); font-size: 13px; font-weight: 600; text-decoration: none; }
+.map-geo > small { font-size: 12px; color: var(--muted); }
+.map-buildings { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+.map-buildings > summary { display: flex; align-items: center; min-height: 36px; cursor: pointer; color: var(--accent); font-size: 13px; font-weight: 600; }
+.map-building-list { display: grid; gap: 2px; max-height: 240px; margin: 6px 0 0; padding: 0; overflow: auto; overscroll-behavior: contain; list-style: none; }
+.map-building-list > li { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 8px; padding: 4px 6px; border-radius: 6px; font-size: 13px; }
+.map-building-list > li small { font-size: 12px; color: var(--muted); }
+.map-building-list > li a { font-size: 12px; color: var(--accent); text-decoration: none; }
+.map-building-source { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+/* 「我在哪」：浏览器定位后找最近的楼栋 */
+.map-locate-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0 12px 8px; }
+.map-locate-button { min-height: 40px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 11px; background: var(--fill-1); color: var(--accent); font: inherit; font-weight: 600; }
+.map-locate-note { flex: 1; min-width: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.map-locate { margin: 0 12px 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--fill-1); }
+.map-locate[hidden] { display: none; }
+.map-locate strong { display: block; font-size: 13px; }
+.map-locate span { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.map-locate-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.map-locate-links a { display: inline-flex; align-items: center; min-height: 32px; color: var(--accent); font-size: 12px; font-weight: 600; }
+/* 全屏：把地图铺满视口，退出后恢复原布局 */
+body.map-fullscreen-open { overflow: hidden; }
+.map-fullscreen-button { margin-left: auto; min-height: 36px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--fill-1); color: var(--accent); font: inherit; font-size: 12px; font-weight: 600; }
+.map-explorer.map-is-fullscreen { position: fixed; inset: 0; z-index: 80; display: flex; flex-direction: column; overflow: hidden; background: var(--bg); }
+.map-explorer.map-is-fullscreen > .map-search, .map-explorer.map-is-fullscreen > .map-toolbar, .map-explorer.map-is-fullscreen .map-sidebar { display: none; }
+.map-explorer.map-is-fullscreen .map-layout { display: flex; flex: 1; min-height: 0; }
+.map-explorer.map-is-fullscreen .map-panel { display: flex; flex: 1; flex-direction: column; min-width: 0; border: 0; border-radius: 0; box-shadow: none; }
+.map-explorer.map-is-fullscreen .map-viewport { flex: 1; height: auto; min-height: 0; border-radius: 0; }
+
+/* 标记避让：挨得太近的图标挪开一点，真实位置用一个小圆点标出来 */
+.map-pin-anchor {
+  position: absolute;
+  z-index: 1;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  border-radius: 50%;
+  background: var(--line);
+  opacity: 0.75;
+  pointer-events: none;
+}
+.map-pin-crowded { z-index: 3; }
+.map-pin-crowded:hover, .map-pin-crowded:focus-visible { z-index: 9; }
