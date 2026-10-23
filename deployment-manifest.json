@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generator": "cqu-huxi-static-release-v1",
-  "generatedAt": "2026-10-23T11:25:25.293Z",
+  "generatedAt": "2026-10-23T15:14:06.972Z",
   "entrypoint": "index.html",
   "routing": {
     "strategy": "hash",
@@ -80,8 +80,8 @@
     },
     "minify": {
       "files": 5,
-      "beforeBytes": 1011969,
-      "afterBytes": 648301
+      "beforeBytes": 1029083,
+      "afterBytes": 656357
     },
     "sensitiveScan": {
       "scannedFiles": 140,
@@ -89,14 +89,14 @@
     },
     "compression": {
       "files": 137,
-      "originalBytes": 2533348,
-      "gzipBytes": 746739,
-      "brotliBytes": 645925
+      "originalBytes": 2550767,
+      "gzipBytes": 752127,
+      "brotliBytes": 650499
     },
     "publicSourceFiles": 151,
     "omittedSourceFiles": 1
   },
-  "totalBytes": 49625684,
+  "totalBytes": 49643603,
   "files": [
     {
       "path": "404.html",
@@ -145,8 +145,8 @@
     },
     {
       "path": "assets/downloads/cqu-huxi-assistant-skill.zip",
-      "bytes": 382363,
-      "sha256": "eeb53c060fbd51b47e18b22adaff1428be71f0e402cd43185a9a69f32bba283f",
+      "bytes": 382863,
+      "sha256": "cdc4eaee29c8430d3ac6637354175ecf864aa1a13cc2425a8137a4583aa36ab9",
       "referencedBy": [
         "js/app.js"
       ]
@@ -393,8 +393,8 @@
     },
     {
       "path": "css/demo.css",
-      "bytes": 7417,
-      "sha256": "1b5874e7797c202cdbc485937f4d7726e396882198767464af0161b2501e3171",
+      "bytes": 7842,
+      "sha256": "ce88950ad4c9a1656a39f92f5f267599917f88d2c9b73a2e575b6c4f347de944",
       "referencedBy": [
         "index.html"
       ]
@@ -425,16 +425,16 @@
     },
     {
       "path": "css/map-enhancements.css",
-      "bytes": 6895,
-      "sha256": "8cd1d620793c14fb54cfdbc29c2ac3c42bac23d96b3070f1f37edb94ce1e2605",
+      "bytes": 7340,
+      "sha256": "941a1ae56eead2f8dbfa6ffaaef6594ff866021831cb9af3bda830364b3b71e5",
       "referencedBy": [
         "index.html"
       ]
     },
     {
       "path": "css/polish.css",
-      "bytes": 29997,
-      "sha256": "b067b49e27e50bab8b9959e29df2bbd01e6696fd7e05f4399263804948be6f75",
+      "bytes": 35908,
+      "sha256": "9bddf67c7357d76ff4c9999a86c2db0d0d3caed2e114bbeaba2fc2e502fff7b3",
       "referencedBy": [
         "index.html"
       ]
@@ -457,16 +457,16 @@
     },
     {
       "path": "css/timetable.css",
-      "bytes": 43150,
-      "sha256": "8d2e3fd7e1a38622ed7990096d5734733ec24d5ee4626c82cca9b5066377f5b4",
+      "bytes": 45075,
+      "sha256": "a6462a16f23558b0198ab553550908e6c8a909035eed8d2de0b596f779bc9187",
       "referencedBy": [
         "index.html"
       ]
     },
     {
       "path": "index.html",
-      "bytes": 8257,
-      "sha256": "1b228e43ad104a47c3222d78220acd0034b59b29daee7a6375ca32f869f98e32",
+      "bytes": 8352,
+      "sha256": "343971bee564e08b798734247ef3d2503426bfbea5dd6cc364a981674af93447",
       "referencedBy": [
         "404.html",
         "entrypoint",
@@ -483,8 +483,8 @@
     },
     {
       "path": "js/academic/assessment-1.js",
-      "bytes": 8790,
-      "sha256": "2fbe2e5f8ca7d682f6a6fe1f37069d703ea9f425c45ca8ddea145e5e6408b206",
+      "bytes": 8854,
+      "sha256": "f6722f1e589dfc8b663c26856be66be1db1b6bec0192ae0b7685f5847f352bf8",
       "referencedBy": [
         "js/academic-content.js"
       ]
@@ -611,16 +611,16 @@
     },
     {
       "path": "js/academic/fitness-1.js",
-      "bytes": 7388,
-      "sha256": "5982d95055982026ded9d54548e9af61227308ada9b8ed5cb2e3b7069e51c531",
+      "bytes": 7452,
+      "sha256": "fde9c73f39b8e797b691d5787b98f73bf7bbf3dd5e485baa7d6314801ad217d6",
       "referencedBy": [
         "js/academic-content.js"
       ]
     },
     {
       "path": "js/academic/grades-1.js",
-      "bytes": 3181,
-      "sha256": "50cc3f91059ff9a1477357459a7487e468f50a9c0bdaa988f866ca299b81b2f2",
+      "bytes": 3213,
+      "sha256": "d4c388e01376aeb3dbc8fc054f7b406be1ea7077f5e113955890dc7d7e75203a",
       "referencedBy": [
         "js/academic-content.js"
       ]
@@ -635,24 +635,24 @@
     },
     {
       "path": "js/academic/postgraduate-1.js",
-      "bytes": 9168,
-      "sha256": "7b2414fdf7e54ad9c898751e30297cc0cc0d2727efc3cc87212ad2bfff89b9e5",
+      "bytes": 9369,
+      "sha256": "a708136448cb58287841b7ed6c84d264efaa8534b6517e04fbd4442aa2b8ba40",
       "referencedBy": [
         "js/academic-content.js"
       ]
     },
     {
       "path": "js/academic/search-index.js",
-      "bytes": 456563,
-      "sha256": "d48039ef6e81ebea9b4e5020018331a07941360f2cfba4ab6d9a43a3eb3a7c42",
+      "bytes": 456732,
+      "sha256": "c0293451477072325e03d7d783d9bfda72a7037984ff9d631aa992de0b6253c4",
       "referencedBy": [
         "js/academic-loader.js"
       ]
     },
     {
       "path": "js/academic/selection-1.js",
-      "bytes": 3788,
-      "sha256": "40cfecdae4ddcf0daae87bcb8897f04da7dad1d9035b92acc1224803257f356d",
+      "bytes": 3820,
+      "sha256": "ab1de5d3989b66688b7ab1ac00b399807340856a6ebe2bacb6ae3ee38e79a2c5",
       "referencedBy": [
         "js/academic-content.js"
       ]
@@ -700,7 +700,7 @@
     {
       "path": "js/bundle-base.js",
       "bytes": 24915,
-      "sha256": "78b0b1f515f12c15494fbdd7f0250ad4470bf331a1ff3663572d73f1182b6098",
+      "sha256": "a2e9195ec067cc37785b5457e6935589d9912345ba98bb0ba975e27f007c0d5b",
       "referencedBy": [
         "js/academic-loader.js",
         "js/browser-context.js",
@@ -715,8 +715,8 @@
     },
     {
       "path": "js/bundle-content.js",
-      "bytes": 239507,
-      "sha256": "ba24999401852b25dec3bd525c04ca4613a05f356a70fa611c39d343b8e4d903",
+      "bytes": 239974,
+      "sha256": "5526d1bb71e1e2b3c64d70e883eb52845842b4a4a7e29b6ba52e61019fe9e5ed",
       "referencedBy": [
         "js/academic-calendar.js",
         "js/academic-content.js",
@@ -735,8 +735,8 @@
     },
     {
       "path": "js/bundle-ui.js",
-      "bytes": 362233,
-      "sha256": "7a8e2aac031bb46f14b055e63be8a5a667d49e5bafaec7d304c03378bff89e67",
+      "bytes": 369745,
+      "sha256": "40e430e73f1d0dac7b906f998ef54501bd6fa0b4e9210b46e1faf9c9c368aa74",
       "referencedBy": [
         "js/app.js",
         "js/backup.js",
@@ -767,8 +767,8 @@
     },
     {
       "path": "js/search.js",
-      "bytes": 20656,
-      "sha256": "1a8b23597b4d6c760dbd70359be1ed16f7b598c75e41e677b391c5405877c741",
+      "bytes": 20733,
+      "sha256": "82246c09d75eba23aa5db5b349fab74f915a535aab7837d26ac1c2a57a1a44b6",
       "referencedBy": [
         "index.html"
       ]
@@ -2156,7 +2156,7 @@
     {
       "path": "sw.js",
       "bytes": 13075,
-      "sha256": "e3b020a6977069c98104cbbe1773332431a2bbe158ea6801a498db7c544907d2",
+      "sha256": "01e298254aee4ef5c5131cfebd4eae2af656d693832248f642bfd46556b10bdc",
       "referencedBy": [
         "js/pwa.js"
       ]

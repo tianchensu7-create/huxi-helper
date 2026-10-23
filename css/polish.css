@@ -604,6 +604,7 @@ body[data-theme='dark'] .detail-caution svg {
 }
 .answer-text p {
   margin: 0 0 4px;
+  overflow-wrap: anywhere;
   color: var(--ink);
   font-size: 15px;
   line-height: 1.75;
@@ -1473,4 +1474,301 @@ body[data-theme='dark'] .profile-hero .profile-avatar {
   .mine-quick-tile:active {
     transform: none;
   }
+}
+
+/* ---------- 手机全屏搜索层 ---------- */
+.search-cancel,
+.suggestion-search-all {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body.search-open {
+    overflow: hidden;
+  }
+
+  body.search-open .bottom-nav {
+    display: none;
+  }
+
+  /* 顶栏的毛玻璃会让 fixed 子元素只相对顶栏定位，展开搜索层时先关掉。 */
+  body.search-open .topbar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  body.search-open .search-wrap {
+    position: fixed;
+    z-index: 90;
+    inset: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 0 8px;
+    width: auto;
+    padding: calc(10px + env(safe-area-inset-top)) 16px 0;
+    background: var(--bg);
+    animation: search-layer-in 0.18s ease-out;
+  }
+
+  body.search-open .search-cancel {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 4px;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  body.search-open .search-suggestions {
+    position: static;
+    grid-column: 1 / -1;
+    margin: 10px -16px 0;
+    padding: 8px 16px calc(24px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  body.search-open .search-suggestions[hidden] {
+    display: none;
+  }
+
+  body.search-open .suggestion-search-all {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    min-height: 52px;
+    margin-bottom: 12px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 14px;
+    background: var(--accent-container);
+    color: var(--accent);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  body.search-open .suggestion-search-all span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@keyframes search-layer-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.search-open .search-wrap {
+    animation: none;
+  }
+}
+
+/* ---------- 统一的状态反馈 ---------- */
+/* 提示条：带「撤销」时可以点，按钮颜色在深浅色下都清楚。 */
+.toast.has-action {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  padding-right: 10px;
+  pointer-events: auto;
+}
+
+.toast-action {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 14%);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toast-action:hover {
+  background: rgb(255 255 255 / 22%);
+}
+
+/* 按下态：卡片和入口按下时统一轻微缩小，松手回弹。 */
+:is(
+  .search-result,
+  .guide-card,
+  .service-card,
+  .place-card,
+  .launch-tile,
+  .guide-row,
+  .side-map-card,
+  .answer-source,
+  .mine-quick-tile
+):active {
+  transform: scale(0.985);
+  transition-duration: 0.08s;
+}
+
+/* 换页：主内容轻微淡入上移；系统开了「减少动态效果」就不动。 */
+@media (prefers-reduced-motion: no-preference) {
+  #main.page-enter {
+    animation: page-enter 0.24s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :is(
+    .search-result,
+    .guide-card,
+    .service-card,
+    .place-card,
+    .launch-tile,
+    .guide-row,
+    .side-map-card,
+    .answer-source,
+    .mine-quick-tile
+  ):active {
+    transform: none;
+  }
+}
+
+/* ---------- 正文排版：列表、关键数字、要点 ---------- */
+.detail-section p + p {
+  margin-top: 0.6em;
+}
+
+.detail-section .body-list {
+  display: grid;
+  gap: 6px;
+  max-width: 68ch;
+  margin: 8px 0;
+  padding-left: 1.5em;
+  color: var(--ink);
+  font-size: calc(15.5px * var(--reader-scale, 1));
+  line-height: 1.8;
+}
+
+.detail-section ol.body-list li::marker {
+  color: var(--accent);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.detail-section ul.body-list li::marker {
+  color: var(--accent);
+}
+
+.detail-section .body-list + p {
+  margin-top: 0.6em;
+}
+
+.key-fact {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.key-points {
+  margin: 4px 0 18px;
+  padding: 14px 16px 12px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent) 6%, var(--content-fill));
+  border: 1px solid color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.key-points h3 {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.key-points h3 small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.key-points ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: key-point;
+}
+
+.key-points li {
+  position: relative;
+  min-width: 0;
+  padding-left: 28px;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+  font-size: calc(14.5px * var(--reader-scale, 1));
+  line-height: 1.7;
+  counter-increment: key-point;
+}
+
+.key-points li::before {
+  content: counter(key-point);
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.key-points li b {
+  display: block;
+  font-weight: 700;
+}
+
+/* 绿色标签的文字压到 4.5:1 以上对比度。 */
+.meta-chip.chip-verified {
+  background: #e3f5e8;
+  color: #1a6634;
+}
+
+body[data-theme='dark'] .meta-chip.chip-verified {
+  background: rgb(48 209 88 / 16%);
+  color: #8ce0a6;
+}
+
+.answer-done {
+  padding: 0 6px;
+  border-radius: 6px;
+  background: var(--fill-1);
+  color: var(--muted);
+  font-size: 12px;
 }

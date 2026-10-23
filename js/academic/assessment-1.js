@@ -8,6 +8,7 @@ CampusAcademic.registerBundle("assessment-1", [
     "readingTime": "3 分钟",
     "status": "已整理",
     "publishedAt": "2022年8月8日",
+    "verifiedAt": "2026-10-23",
     "sources": [
       {
         "label": "重庆大学普通本科学生综合素质测评办法（2022年修订）",
@@ -78,6 +79,7 @@ CampusAcademic.registerBundle("assessment-1", [
     "isDemo": false,
     "readingTime": "2 分钟",
     "publishedAt": "原文件未注明",
+    "verifiedAt": "2026-10-23",
     "sources": [
       {
         "label": "本科生院综合测评奖励加分和违纪扣分实施细则",

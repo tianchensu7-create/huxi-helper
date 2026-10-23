@@ -8,6 +8,7 @@ CampusAcademic.registerBundle("fitness-1", [
     "readingTime": "2 分钟",
     "status": "已整理",
     "publishedAt": "2014年修订（文件未标独立发布日期）",
+    "verifiedAt": "2026-10-23",
     "sources": [
       {
         "label": "国家学生体质健康标准（2014年修订）大学评分表",
@@ -76,6 +77,7 @@ CampusAcademic.registerBundle("fitness-1", [
     "readingTime": "2 分钟",
     "status": "已整理",
     "publishedAt": "2026年活动规程（原文件未注明独立发布日期）",
+    "verifiedAt": "2026-10-23",
     "sources": [
       {
         "label": "2026校园健康跑活动规程",

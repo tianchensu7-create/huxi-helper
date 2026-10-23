@@ -8,6 +8,7 @@ CampusAcademic.registerBundle("selection-1", [
     "readingTime": "2 分钟",
     "status": "历史通知",
     "publishedAt": "原通知未标发布日期；选拔期2026年2-3月",
+    "verifiedAt": "2026-10-23",
     "sources": [
       {
         "label": "二次选拔通知",

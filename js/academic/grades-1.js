@@ -7,6 +7,7 @@ CampusAcademic.registerBundle("grades-1", [
     "isDemo": false,
     "readingTime": "2 分钟",
     "publishedAt": "2022年8月8日 / 2025年8月",
+    "verifiedAt": "2026-10-23",
     "sources": [
       {
         "label": "电气工程学院2026年推免遴选工作细则（2025年8月）",

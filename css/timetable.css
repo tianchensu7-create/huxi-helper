@@ -2138,3 +2138,79 @@ body[data-readability='high-contrast'] :is(.tt-card, .tt-block, .ht-next, .ht-mi
     transform: none;
   }
 }
+
+/* ---------- 手机上「日 / 周」切换 ---------- */
+.tt-view-switch {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--fill-1);
+}
+.tt-view-switch button {
+  min-width: 36px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--ink-soft);
+  font: 600 14px/1 var(--font-body);
+  cursor: pointer;
+}
+.tt-view-switch button[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgb(15 23 42 / 12%);
+}
+/* 平板和电脑始终是整周格子，不需要切换。 */
+@media (min-width: 768px) {
+  .tt-view-switch {
+    display: none;
+  }
+}
+/* 手机整周视图：参照智慧教务，七列窄格，课程名逐行换行，左侧节次栏收窄。 */
+@media (max-width: 767px) {
+  .tt-view-week .tt-day-view {
+    display: none;
+  }
+  .tt-view-week .tt-grid-wrap {
+    display: block;
+    margin: 0 -6px;
+  }
+  .tt-view-week .tt-grid {
+    grid-template-columns: 36px repeat(7, minmax(0, 1fr));
+    grid-template-rows: auto repeat(4, 56px) 8px repeat(5, 56px) 8px repeat(3, 56px);
+  }
+  .tt-view-week .tt-grid-day span {
+    font-size: 12px;
+  }
+  .tt-view-week .tt-grid-lesson small {
+    letter-spacing: -0.02em;
+  }
+  #study-space .tt-view-week .tt-block {
+    padding: 4px 3px 4px 5px;
+    border-left-width: 2px;
+    border-radius: 7px;
+  }
+  .tt-view-week .tt-block strong {
+    -webkit-line-clamp: 4;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    word-break: break-all;
+  }
+  .tt-view-week .tt-block span,
+  .tt-view-week .tt-block em {
+    font-size: 12px;
+    white-space: normal;
+    word-break: break-all;
+  }
+  .tt-view-week .tt-now-time span {
+    padding: 1px 3px;
+  }
+}
+/* 教室号整体不拆：只在 <wbr> 处（楼号和教室号之间）换行。 */
+.tt-view-week .tt-block .tt-block-room {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
