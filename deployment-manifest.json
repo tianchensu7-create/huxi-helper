@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generator": "cqu-huxi-static-release-v1",
-  "generatedAt": "2026-10-24T02:10:21.653Z",
+  "generatedAt": "2026-10-24T04:00:07.401Z",
   "entrypoint": "index.html",
   "routing": {
     "strategy": "hash",
@@ -80,8 +80,8 @@
     },
     "minify": {
       "files": 5,
-      "beforeBytes": 1031569,
-      "afterBytes": 657141
+      "beforeBytes": 1032289,
+      "afterBytes": 657282
     },
     "sensitiveScan": {
       "scannedFiles": 140,
@@ -89,14 +89,14 @@
     },
     "compression": {
       "files": 137,
-      "originalBytes": 2553382,
-      "gzipBytes": 753182,
-      "brotliBytes": 651431
+      "originalBytes": 2553523,
+      "gzipBytes": 753233,
+      "brotliBytes": 651468
     },
     "publicSourceFiles": 151,
     "omittedSourceFiles": 1
   },
-  "totalBytes": 49646218,
+  "totalBytes": 49646359,
   "files": [
     {
       "path": "404.html",
@@ -466,7 +466,7 @@
     {
       "path": "index.html",
       "bytes": 8352,
-      "sha256": "08918127e5737fcc03f117fab397623654ba4a5fec25ddb8ffeadff514213112",
+      "sha256": "178a9a1b0b9d3799523c809ba9f947003850bdbaef32c91d7ca4f00f4be832c2",
       "referencedBy": [
         "404.html",
         "entrypoint",
@@ -699,8 +699,8 @@
     },
     {
       "path": "js/bundle-base.js",
-      "bytes": 24915,
-      "sha256": "a2e9195ec067cc37785b5457e6935589d9912345ba98bb0ba975e27f007c0d5b",
+      "bytes": 25002,
+      "sha256": "fa50466decbae7bb32b0a04a390043478324240c2dabd833644e2b9166b4f191",
       "referencedBy": [
         "js/academic-loader.js",
         "js/browser-context.js",
@@ -735,8 +735,8 @@
     },
     {
       "path": "js/bundle-ui.js",
-      "bytes": 370529,
-      "sha256": "6a3967b7acccbbfe4aaccfa68378e59298a3ba9c34d22ce2c700942c1c860a55",
+      "bytes": 370583,
+      "sha256": "5e78a21571be4db37bd2d5df49f7abef35e2871ebd03ba18d696c62cb414329e",
       "referencedBy": [
         "js/app.js",
         "js/backup.js",
@@ -2156,7 +2156,7 @@
     {
       "path": "sw.js",
       "bytes": 13075,
-      "sha256": "21c6def515f22e4b0ddf5221eaf2aecb8cdc6249bf8d36efa1d71d4ca20e7901",
+      "sha256": "f11056dff798e1b02d6d86356c007b67637e12a96cd8ce1fd3492d6bbaf8d888",
       "referencedBy": [
         "js/pwa.js"
       ]

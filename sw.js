@@ -34,9 +34,9 @@ const FALLBACK_ICON = 'assets/icons/icon-192.png?v=014f83eef1';
 // sources/ 下的原始资料一律不预缓存，也不进运行时缓存。
 const CORE_SHELL = [
   'index.html',
-  'js/bundle-base.js?v=a2e9195ec0',
+  'js/bundle-base.js?v=fa50466dec',
   'js/bundle-content.js?v=5526d1bb71',
-  'js/bundle-ui.js?v=6a3967b7ac',
+  'js/bundle-ui.js?v=5e78a21571',
   'offline.html',
   'manifest.webmanifest',
   'css/theme.css?v=d75194442a',
