@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generator": "cqu-huxi-static-release-v1",
-  "generatedAt": "2026-10-23T15:14:06.972Z",
+  "generatedAt": "2026-10-24T02:10:21.653Z",
   "entrypoint": "index.html",
   "routing": {
     "strategy": "hash",
@@ -80,8 +80,8 @@
     },
     "minify": {
       "files": 5,
-      "beforeBytes": 1029083,
-      "afterBytes": 656357
+      "beforeBytes": 1031569,
+      "afterBytes": 657141
     },
     "sensitiveScan": {
       "scannedFiles": 140,
@@ -89,14 +89,14 @@
     },
     "compression": {
       "files": 137,
-      "originalBytes": 2550767,
-      "gzipBytes": 752127,
-      "brotliBytes": 650499
+      "originalBytes": 2553382,
+      "gzipBytes": 753182,
+      "brotliBytes": 651431
     },
     "publicSourceFiles": 151,
     "omittedSourceFiles": 1
   },
-  "totalBytes": 49643603,
+  "totalBytes": 49646218,
   "files": [
     {
       "path": "404.html",
@@ -385,8 +385,8 @@
     },
     {
       "path": "css/daily-overview.css",
-      "bytes": 5945,
-      "sha256": "e6cdc0e3674b3b0778f6a184ad21506a659b0b57149ab7ecd82a9fa1a581f0f1",
+      "bytes": 7655,
+      "sha256": "5ae9202630380be8c7485f9a604c3236e87fe3fc302d7441b2c114421fe1a38c",
       "referencedBy": [
         "index.html"
       ]
@@ -457,8 +457,8 @@
     },
     {
       "path": "css/timetable.css",
-      "bytes": 45075,
-      "sha256": "a6462a16f23558b0198ab553550908e6c8a909035eed8d2de0b596f779bc9187",
+      "bytes": 45196,
+      "sha256": "743249fd905133df297a1dd29c4f20af91a03d34cb0dbf5317b2a640a183461b",
       "referencedBy": [
         "index.html"
       ]
@@ -466,7 +466,7 @@
     {
       "path": "index.html",
       "bytes": 8352,
-      "sha256": "343971bee564e08b798734247ef3d2503426bfbea5dd6cc364a981674af93447",
+      "sha256": "08918127e5737fcc03f117fab397623654ba4a5fec25ddb8ffeadff514213112",
       "referencedBy": [
         "404.html",
         "entrypoint",
@@ -735,8 +735,8 @@
     },
     {
       "path": "js/bundle-ui.js",
-      "bytes": 369745,
-      "sha256": "40e430e73f1d0dac7b906f998ef54501bd6fa0b4e9210b46e1faf9c9c368aa74",
+      "bytes": 370529,
+      "sha256": "6a3967b7acccbbfe4aaccfa68378e59298a3ba9c34d22ce2c700942c1c860a55",
       "referencedBy": [
         "js/app.js",
         "js/backup.js",
@@ -2156,7 +2156,7 @@
     {
       "path": "sw.js",
       "bytes": 13075,
-      "sha256": "01e298254aee4ef5c5131cfebd4eae2af656d693832248f642bfd46556b10bdc",
+      "sha256": "21c6def515f22e4b0ddf5221eaf2aecb8cdc6249bf8d36efa1d71d4ca20e7901",
       "referencedBy": [
         "js/pwa.js"
       ]

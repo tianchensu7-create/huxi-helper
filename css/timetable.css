@@ -1128,6 +1128,13 @@ body[data-theme='dark'] #study-space .tt-day-chip.tt-selected {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
+.tt-grid-lesson .tt-grid-end {
+  line-height: 1.15;
+  opacity: 0.72;
+}
+.tt-grid-lesson-now > * {
+  visibility: hidden;
+}
 .tt-grid-cell {
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
